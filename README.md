@@ -6,4 +6,15 @@ EIPH_WSI Makrophagen
 
 #### Regression:
 
-https://medium.com/@btahir/a-quick-guide-to-using-regression-with-image-data-in-fastai-117304c0af90
+#### QuadTree:
+http://www.astroml.org/book_figures/chapter2/fig_quadtree_example.html
+
+
+### To-Do:
+
+- [x] Regression
+- [x] Visualisierung der Ergebnisse
+- [ ] RetinaNet für Lokalisation
+- [ ] Quad Tree
+- [ ] Verteilung der Zellen und Scores
+- [ ] Dynamic sampling at train time. Anpassen der Wahrscheinlichkeiten zur trainingszeit
