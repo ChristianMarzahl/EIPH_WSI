@@ -2,6 +2,7 @@ from pathlib import Path
 from SlideRunner.dataAccess.database import Database
 import openslide
 
+from random import randint
 
 from fastai import *
 from fastai.vision import *
@@ -21,7 +22,7 @@ class SlideContainer():
         self.level = level
 
     def get_patch(self,  x: int=0, y: int=0):
-        return np.array(self.slide.read_region(location=(int(x * down_factor),int(y * down_factor)),
+        return np.array(self.slide.read_region(location=(int(x * self.down_factor),int(y * self.down_factor)),
                                           level=self.level, size=(self.width, self.height)))[:, :, :3]
 
     @property
@@ -31,7 +32,7 @@ class SlideContainer():
     def __str__(self):
         return str(self.path)
 
-def bb_pad_collate(samples:BatchSamples, pad_idx:int=0) -> Tuple[FloatTensor, Tuple[LongTensor, LongTensor]]:
+def bb_pad_collate_min(samples:BatchSamples, pad_idx:int=0) -> Tuple[FloatTensor, Tuple[LongTensor, LongTensor]]:
     "Function that collect `samples` of labelled bboxes and adds padding with `pad_idx`."
     samples = [s for s in samples if s[1].data[0].shape[0] > 0] # check that labels are available
 
@@ -113,12 +114,24 @@ class SlideObjectCategoryList(ObjectCategoryList):
         if x > 0 and y > 0:
             bboxes = np.array(bboxes)
             labels = np.array(labels)
-            ids = (bboxes[:, 0] > x) & (bboxes[:, 2] < x + w) & (bboxes[:, 1] > y) & (bboxes[:, 3] < y + h)
-            bboxes = [[box[1] - y,box[0] - x, box[3] - y,  box[2] - x] for box in bboxes[ids]]
-            labels = labels[ids] # list(labels)
+
+            bboxes[:, [0, 2]] = bboxes[:, [0, 2]] - x
+            bboxes[:, [1, 3]] = bboxes[:, [1, 3]] - y
+
+            bb_widths = (bboxes[:, 2] - bboxes[:, 0]) / 2
+            bb_heights = (bboxes[:, 3] - bboxes[:, 1]) / 2
+
+            ids = ((bboxes[:, 0] + bb_widths) > 0) \
+                  & ((bboxes[:, 1] + bb_heights) > 0) \
+                  & ((bboxes[:, 2] - bb_widths) < w) \
+                  & ((bboxes[:, 3] - bb_heights) < h)
+
+            bboxes = bboxes[ids]
+            bboxes = np.clip(bboxes, 0, x)
+            bboxes = bboxes[:, [1, 0, 3, 2]]
+
+            labels = labels[ids]
             return ImageBBox.create(h, w, bboxes, labels, classes=self.classes, pad_idx=self.pad_idx)
         else:
-            # just taking 10 boxes speed up initalisation
             return ImageBBox.create(h, w, bboxes[:10], labels[:10], classes=self.classes, pad_idx=self.pad_idx)
-
 
