@@ -7,6 +7,7 @@ from random import randint
 from fastai import *
 from fastai.vision import *
 from fastai.callbacks import *
+from fastai.data_block import *
 
 class SlideContainer():
 
@@ -71,7 +72,23 @@ class SlideLabelList(LabelList):
             return self.new(self.x[idxs], self.y[idxs])
 
 
+
+PreProcessors = Union[PreProcessor, Collection[PreProcessor]]
+fastai_types[PreProcessors] = 'PreProcessors'
+
 class SlideItemList(ItemList):
+
+    def __init__(self, items:Iterator, path:PathOrStr='.', label_cls:Callable=None, inner_df:Any=None,
+                 processor:PreProcessors=None, x:'ItemList'=None, ignore_empty:bool=False):
+        self.path = Path(path)
+        self.num_parts = len(self.path.parts)
+        self.items,self.x,self.ignore_empty = items,x,ignore_empty
+        self.sizes = [None] * len(self.items)
+        if not isinstance(self.items,np.ndarray): self.items = array(self.items, dtype=object)
+        self.label_cls,self.inner_df,self.processor = ifnone(label_cls,self._label_cls),inner_df,processor
+        self._label_list,self._split = SlideLabelList,ItemLists
+        self.copy_new = ['x', 'label_cls', 'path']
+        self.__post_init__()
 
     def __getitem__(self,idxs: int, x: int=0, y: int=0)->Any:
         idxs = try_int(idxs)
