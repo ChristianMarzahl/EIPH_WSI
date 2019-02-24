@@ -4,6 +4,8 @@ import openslide
 
 from random import randint
 
+from helper.object_detection_helper import *
+
 from fastai import *
 from fastai.vision import *
 from fastai.callbacks import *
@@ -151,4 +153,47 @@ class SlideObjectCategoryList(ObjectCategoryList):
             return ImageBBox.create(h, w, bboxes, labels, classes=self.classes, pad_idx=self.pad_idx)
         else:
             return ImageBBox.create(h, w, bboxes[:10], labels[:10], classes=self.classes, pad_idx=self.pad_idx)
+
+
+def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_thresh: float=0.3,  image_count: int=5):
+    with torch.no_grad():
+        for img_batch, target_batch in learn.data.valid_dl:
+            prediction_batch = learn.model(img_batch)
+            class_pred_batch, bbox_pred_batch = prediction_batch[:2]
+            regression_pred_batch = prediction_batch[-1].view(-1) if len(prediction_batch) == 4 \
+                else [None] * class_pred_batch.shape(0)
+            bbox_gt_batch, class_gt_batch = target_batch
+
+            for img, bbox_gt, class_gt, clas_pred, bbox_pred, reg_pred in \
+                    list(zip(img_batch, bbox_gt_batch, class_gt_batch, class_pred_batch, bbox_pred_batch,
+                             regression_pred_batch))[:image_count]:
+                img = Image(learn.data.denorm(img))
+
+                bbox_pred, scores, preds = process_output(clas_pred, bbox_pred, anchors, detect_thresh)
+                if bbox_pred is None:
+                    continue
+
+                to_keep = nms(bbox_pred, scores, nms_thresh)
+                bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
+
+                t_sz = torch.Tensor([*img.size])[None].cpu()
+                bbox_gt = bbox_gt[np.nonzero(class_gt)].squeeze(dim=1).cpu()
+                class_gt = class_gt[class_gt > 0] - 1
+                # change gt from x,y,x2,y2 -> x,y,w,h
+                bbox_gt[:, 2:] = bbox_gt[:, 2:] - bbox_gt[:, :2]
+
+                bbox_gt = to_np(rescale_boxes(bbox_gt, t_sz))
+                bbox_pred = to_np(rescale_boxes(bbox_pred, t_sz))
+                # change from center to top left
+                bbox_pred[:, :2] = bbox_pred[:, :2] - bbox_pred[:, 2:] / 2
+
+                pred_score = f'{np.mean(to_np(preds)):.2f}'
+                gt_score = f'{np.mean(to_np(class_gt)):.2f}'
+
+                pred_score = pred_score if reg_pred is None else f'Box:{pred_score} \n Reg:{to_np(reg_pred):.2f}'
+
+                show_results(img, bbox_pred, preds, scores, list(range(0,learn.data.c))
+                             , bbox_gt, class_gt, (15, 15), titleA=str(gt_score), titleB=str(pred_score))
+            break
+
 
