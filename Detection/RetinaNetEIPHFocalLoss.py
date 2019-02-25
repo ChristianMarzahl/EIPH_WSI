@@ -3,10 +3,10 @@ from loss.RetinaNetFocalLoss import *
 class RetinaNetEIPHFocalLoss(RetinaNetFocalLoss):
 
     def __init__(self, anchors: Collection[float], gamma: float = 2., alpha: float = 0.25, pad_idx: int = 0,
-                 reg_loss: LossFunction = F.smooth_l1_loss):
-        super().__init__(anchors, gamma, alpha, pad_idx, reg_loss)
+                 reg_loss_box: LossFunction = F.smooth_l1_loss, reg_loss_score=None):
+        super().__init__(anchors, gamma, alpha, pad_idx, reg_loss_box)
         self.metric_names.append('RegImageLoss')
-        self.reg_pred_loss = nn.L1Loss()#nn.MSELoss()#
+        self.reg_pred_loss = nn.L1Loss() if reg_loss_score is None else reg_loss_score#nn.MSELoss()#
 
 
     def _one_loss(self, clas_pred, bbox_pred, reg_pred, clas_tgt, bbox_tgt):
