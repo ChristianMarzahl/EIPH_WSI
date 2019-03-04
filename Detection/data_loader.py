@@ -111,7 +111,7 @@ class SlideItemList(ItemList):
 class SlideImageItemList(SlideItemList):
     pass
 
-class SlideObjectItemList(SlideImageItemList, ImageItemList):
+class SlideObjectItemList(SlideImageItemList, ImageList):
 
     def get(self, i, x: int, y: int):
         fn = self.items[i]
