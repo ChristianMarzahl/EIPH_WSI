@@ -54,15 +54,21 @@ class SlideLabelList(LabelList):
 
 
     def __getitem__(self,idxs:Union[int,np.ndarray])->'LabelList':
-        _bg_label = 0 # add a backgound label to sample complete random
+        _bg_label_prob = 0.1 # add a backgound label to sample complete random
         idxs = try_int(idxs)
         if isinstance(idxs, numbers.Integral):
             if self.item is None:
                 h, w = self.x.items[idxs].shape
-                class_list = list(set(self.y.items[idxs][1]))
-                class_list.append(_bg_label)
-                class_id = np.random.choice(class_list, 1)[0]
-                if class_id == _bg_label:
+                smaple_probability = np.histogram(self.y.items[idxs][1], bins=list(range(0, self.c+1)), density=True)[0]
+                non_zero_ids = smaple_probability > 0
+                smaple_probability[non_zero_ids] = 1 - smaple_probability[non_zero_ids]
+                smaple_probability[0] = _bg_label_prob
+                # softmax
+                non_zero_ids = smaple_probability > 0
+                smaple_probability[non_zero_ids] = np.exp(smaple_probability[non_zero_ids]) \
+                                                   / np.sum(np.exp(smaple_probability[non_zero_ids]), axis=0)
+                class_id = np.random.choice(list(range(0, self.c)), 1, p=smaple_probability)[0]
+                if class_id == 0:
                     level = self.x.items[idxs].level
                     slide_width, slide_height = self.x.items[idxs].slide.level_dimensions[level]
                     xmin, ymin = randint(int(w / 2), slide_width - w), randint(int(h / 2), slide_height - h)
