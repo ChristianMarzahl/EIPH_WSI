@@ -52,14 +52,24 @@ def bb_pad_collate_min(samples:BatchSamples, pad_idx:int=0) -> Tuple[FloatTensor
 
 class SlideLabelList(LabelList):
 
+
     def __getitem__(self,idxs:Union[int,np.ndarray])->'LabelList':
+        _bg_label = 0 # add a backgound label to sample complete random
         idxs = try_int(idxs)
         if isinstance(idxs, numbers.Integral):
             if self.item is None:
                 h, w = self.x.items[idxs].shape
-                class_id = np.random.choice(list(set(self.y.items[idxs][1])), 1)[0]
-                ids = self.y.items[idxs][1] == class_id
-                xmin, ymin, xmax, ymax = np.array(self.y.items[idxs][0])[ids][randint(0, np.count_nonzero(ids) - 1)]
+                class_list = list(set(self.y.items[idxs][1]))
+                class_list.append(_bg_label)
+                class_id = np.random.choice(class_list, 1)[0]
+                if class_id == _bg_label:
+                    level = self.x.items[idxs].level
+                    slide_width, slide_height = self.x.items[idxs].slide.level_dimensions[level]
+                    xmin, ymin = randint(int(w / 2), slide_width - w), randint(int(h / 2), slide_height - h)
+                else:
+                    # sample from a completely random image position
+                    ids = self.y.items[idxs][1] == class_id
+                    xmin, ymin, xmax, ymax = np.array(self.y.items[idxs][0])[ids][randint(0, np.count_nonzero(ids) - 1)]
                 x = self.x.get(idxs, int(xmin - w / 2), int(ymin - h / 2))
                 y = self.y.get(idxs, int(xmin - w / 2), int(ymin - h / 2))
             else:
@@ -150,6 +160,10 @@ class SlideObjectCategoryList(ObjectCategoryList):
             bboxes = bboxes[:, [1, 0, 3, 2]]
 
             labels = labels[ids]
+            if len(labels) == 0:
+                labels = np.array([0])
+                bboxes = np.array([[0, 0, 1, 1]])
+
             return ImageBBox.create(h, w, bboxes, labels, classes=self.classes, pad_idx=self.pad_idx)
         else:
             return ImageBBox.create(h, w, bboxes[:10], labels[:10], classes=self.classes, pad_idx=self.pad_idx)
@@ -161,7 +175,7 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
             prediction_batch = learn.model(img_batch)
             class_pred_batch, bbox_pred_batch = prediction_batch[:2]
             regression_pred_batch = prediction_batch[-1].view(-1) if len(prediction_batch) == 4 \
-                else [None] * class_pred_batch.shape(0)
+                else [None] * class_pred_batch.shape[0]
             bbox_gt_batch, class_gt_batch = target_batch
 
             for img, bbox_gt, class_gt, clas_pred, bbox_pred, reg_pred in \
