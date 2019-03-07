@@ -55,6 +55,7 @@ class SlideLabelList(LabelList):
 
     def __getitem__(self,idxs:Union[int,np.ndarray])->'LabelList':
         _bg_label_prob = 0.1 # add a backgound label to sample complete random
+        _random_offset_scale = 0.5 # up to 50% offset to left and right of frame
         idxs = try_int(idxs)
         if isinstance(idxs, numbers.Integral):
             if self.item is None:
@@ -65,19 +66,21 @@ class SlideLabelList(LabelList):
                 smaple_probability[0] = _bg_label_prob
                 # softmax
                 non_zero_ids = smaple_probability > 0
+                xoffset=randint(-w,w)*_random_offset_scale
+                yoffset=randint(-h,h)*_random_offset_scale
                 smaple_probability[non_zero_ids] = np.exp(smaple_probability[non_zero_ids]) \
                                                    / np.sum(np.exp(smaple_probability[non_zero_ids]), axis=0)
                 class_id = np.random.choice(list(range(0, self.c)), 1, p=smaple_probability)[0]
                 if class_id == 0:
                     level = self.x.items[idxs].level
                     slide_width, slide_height = self.x.items[idxs].slide.level_dimensions[level]
-                    xmin, ymin = randint(int(w / 2), slide_width - w), randint(int(h / 2), slide_height - h)
+                    xmin, ymin = randint(int(w / 2 -xoffset), slide_width - w), randint(int(h / 2-yoffset), slide_height - h)
                 else:
                     # sample from a completely random image position
                     ids = self.y.items[idxs][1] == class_id
                     xmin, ymin, xmax, ymax = np.array(self.y.items[idxs][0])[ids][randint(0, np.count_nonzero(ids) - 1)]
-                x = self.x.get(idxs, int(xmin - w / 2), int(ymin - h / 2))
-                y = self.y.get(idxs, int(xmin - w / 2), int(ymin - h / 2))
+                x = self.x.get(idxs, int(xmin - w / 2 + xoffset), int(ymin - h / 2 +yoffset))
+                y = self.y.get(idxs, int(xmin - w / 2 + xoffset), int(ymin - h / 2 +yoffset))
             else:
                 x,y = self.item ,0
             if self.tfms or self.tfmargs:
@@ -190,11 +193,9 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
                 img = Image(learn.data.denorm(img))
 
                 bbox_pred, scores, preds = process_output(clas_pred, bbox_pred, anchors, detect_thresh)
-                if bbox_pred is None:
-                    continue
-
-                to_keep = nms(bbox_pred, scores, nms_thresh)
-                bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
+                if bbox_pred is not None:
+                    to_keep = nms(bbox_pred, scores, nms_thresh)
+                    bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
 
                 t_sz = torch.Tensor([*img.size])[None].cpu()
                 bbox_gt = bbox_gt[np.nonzero(class_gt)].squeeze(dim=1).cpu()
@@ -203,12 +204,14 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
                 bbox_gt[:, 2:] = bbox_gt[:, 2:] - bbox_gt[:, :2]
 
                 bbox_gt = to_np(rescale_boxes(bbox_gt, t_sz))
-                bbox_pred = to_np(rescale_boxes(bbox_pred, t_sz))
-                # change from center to top left
-                bbox_pred[:, :2] = bbox_pred[:, :2] - bbox_pred[:, 2:] / 2
+                if bbox_pred is not None:
+                    bbox_pred = to_np(rescale_boxes(bbox_pred, t_sz))
+                    # change from center to top left
+                    bbox_pred[:, :2] = bbox_pred[:, :2] - bbox_pred[:, 2:] / 2
 
-                pred_score = f'{np.mean(to_np(preds)):.2f}'
-                gt_score = f'{np.mean(to_np(class_gt)):.2f}'
+                pred_score = f'{np.mean(to_np(preds)):.2f}' if preds is not None else '0.0'
+
+                gt_score = f'{np.mean(to_np(class_gt)):.2f}' if class_gt.shape[0]>0 else '0.0'
 
                 pred_score = pred_score if reg_pred is None else f'Box:{pred_score} \n Reg:{to_np(reg_pred):.2f}'
 
