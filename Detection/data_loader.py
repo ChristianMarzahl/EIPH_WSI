@@ -60,7 +60,7 @@ class SlideLabelList(LabelList):
             if self.item is None:
                 h, w = self.x.items[idxs].shape
                 smaple_probability = np.histogram(self.y.items[idxs][1], bins=list(range(0, self.c+1)), density=True)[0]
-                non_zero_ids = smaple_probability > 0
+                non_zero_ids = (smaple_probability > 0) & (smaple_probability < 1)
                 smaple_probability[non_zero_ids] = 1 - smaple_probability[non_zero_ids]
                 smaple_probability[0] = _bg_label_prob
                 # softmax
