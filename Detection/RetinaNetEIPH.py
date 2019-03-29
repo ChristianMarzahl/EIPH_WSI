@@ -11,6 +11,16 @@ class RetinaNetEIPH(RetinaNet):
         self.classifier_image = self._create_image_classifier(nf=num_features_model(self.encoder) * 2,
                                                               nc=1, y_range=[0-0.5, n_classes-0.5])
 
+        self.box_reg_classifier = self._head_box_reg_subnet(n_classes=1, n_anchors=n_anchors, n_conv=n_conv, chs=chs,
+                                                            y_range=[0 - 0.5, n_classes - 0.5])
+
+
+    def _head_box_reg_subnet(self, n_classes, n_anchors, n_conv=4, chs=256, y_range=[-0.5,4.5]):
+        layers = [self._conv2d_relu(chs, chs, bias=True) for _ in range(n_conv)]
+        layers += [conv2d(chs, n_classes * n_anchors, bias=True)]
+        layers.append(SigmoidRange(*y_range))
+        return nn.Sequential(*layers)
+
     def _create_image_classifier(self, nf:int, nc:int=1, y_range=[-0.5,4.5],
                            lin_ftrs:Optional[Collection[int]]=None, ps:Floats=0.5, bn_final:bool=False):
         "Model head that takes `nf` features, runs through `lin_ftrs`, and about `nc` classes."
@@ -38,4 +48,7 @@ class RetinaNetEIPH(RetinaNet):
             p_states = [p_state for p_state in p_states if p_state.size()[-1] in self.sizes]
         return [self._apply_transpose(self.classifier, p_states, self.n_classes),
                 self._apply_transpose(self.box_regressor, p_states, 4),
-                [[p.size(2), p.size(3)] for p in p_states], self.classifier_image(c5)]
+                [[p.size(2), p.size(3)] for p in p_states],
+                self.classifier_image(c5),
+                self._apply_transpose(self.box_reg_classifier, p_states, 1),
+                ]

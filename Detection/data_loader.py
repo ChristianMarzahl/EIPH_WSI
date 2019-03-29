@@ -179,43 +179,81 @@ class SlideObjectCategoryList(ObjectCategoryList):
 
 def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_thresh: float=0.3,  image_count: int=5):
     with torch.no_grad():
-        for img_batch, target_batch in learn.data.valid_dl:
-            prediction_batch = learn.model(img_batch)
-            class_pred_batch, bbox_pred_batch = prediction_batch[:2]
-            regression_pred_batch = prediction_batch[-1].view(-1) if len(prediction_batch) == 4 \
-                else [None] * class_pred_batch.shape[0]
-            bbox_gt_batch, class_gt_batch = target_batch
+        img_batch, target_batch = learn.data.one_batch(DatasetType.Train, False, False, False)
 
-            for img, bbox_gt, class_gt, clas_pred, bbox_pred, reg_pred in \
-                    list(zip(img_batch, bbox_gt_batch, class_gt_batch, class_pred_batch, bbox_pred_batch,
-                             regression_pred_batch))[:image_count]:
-                img = Image(learn.data.denorm(img))
+        prediction_batch = learn.model(img_batch)
+        class_pred_batch, bbox_pred_batch = prediction_batch[:2]
+        regression_pred_batch = prediction_batch[3].view(-1) if len(prediction_batch) >= 3 \
+            else [None] * class_pred_batch.shape[0]
+        bbox_regression_pred_batch = prediction_batch[4] if len(prediction_batch) >= 4 \
+            else [None] * bbox_pred_batch.shape[0]
 
-                bbox_pred, scores, preds = process_output(clas_pred, bbox_pred, anchors, detect_thresh)
-                if bbox_pred is not None:
-                    to_keep = nms(bbox_pred, scores, nms_thresh)
-                    bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
+        bbox_gt_batch, class_gt_batch = target_batch
 
-                t_sz = torch.Tensor([*img.size])[None].cpu()
-                bbox_gt = bbox_gt[np.nonzero(class_gt)].squeeze(dim=1).cpu()
-                class_gt = class_gt[class_gt > 0] - 1
-                # change gt from x,y,x2,y2 -> x,y,w,h
-                bbox_gt[:, 2:] = bbox_gt[:, 2:] - bbox_gt[:, :2]
+        for img, bbox_gt, class_gt, clas_pred, bbox_pred, reg_pred, box_reg_pred in \
+                list(zip(img_batch, bbox_gt_batch, class_gt_batch, class_pred_batch, bbox_pred_batch,
+                         regression_pred_batch, bbox_regression_pred_batch))[:image_count]:
+            img = Image(learn.data.denorm(img))
 
-                bbox_gt = to_np(rescale_boxes(bbox_gt, t_sz))
-                if bbox_pred is not None:
-                    bbox_pred = to_np(rescale_boxes(bbox_pred, t_sz))
-                    # change from center to top left
-                    bbox_pred[:, :2] = bbox_pred[:, :2] - bbox_pred[:, 2:] / 2
+            bbox_pred, scores, preds = process_output(clas_pred, bbox_pred, anchors, detect_thresh)
+            if bbox_pred is not None:
+                to_keep = nms(bbox_pred, scores, nms_thresh)
+                bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
+                box_reg_pred = box_reg_pred[to_keep].cpu() if box_reg_pred[0] is not None else None
 
-                pred_score = f'{np.mean(to_np(preds)):.2f}' if preds is not None else '0.0'
+            t_sz = torch.Tensor([*img.size])[None].cpu()
+            bbox_gt = bbox_gt[np.nonzero(class_gt)].squeeze(dim=1).cpu()
+            class_gt = class_gt[class_gt > 0] - 1
+            # change gt from x,y,x2,y2 -> x,y,w,h
+            bbox_gt[:, 2:] = bbox_gt[:, 2:] - bbox_gt[:, :2]
 
-                gt_score = f'{np.mean(to_np(class_gt)):.2f}' if class_gt.shape[0]>0 else '0.0'
+            bbox_gt = to_np(rescale_boxes(bbox_gt, t_sz))
+            if bbox_pred is not None:
+                bbox_pred = to_np(rescale_boxes(bbox_pred, t_sz))
+                # change from center to top left
+                bbox_pred[:, :2] = bbox_pred[:, :2] - bbox_pred[:, 2:] / 2
 
-                pred_score = pred_score if reg_pred is None else f'Box:{pred_score} \n Reg:{to_np(reg_pred):.2f}'
+            pred_score_classes = f'{np.mean(to_np(preds)):.2f}' if preds is not None else '0.0'
+            pred_score_classes_reg = f'{np.mean(to_np(box_reg_pred)):.2f}' if box_reg_pred is not None else '0.0'
+            gt_score = f'{np.mean(to_np(class_gt)):.2f}' if class_gt.shape[0] > 0 else '0.0'
 
-                show_results(img, bbox_pred, preds, scores, list(range(0,learn.data.c))
+            pred_score = pred_score if reg_pred is None else f'Box:{pred_score_classes} \n Reg:{to_np(reg_pred):.2f}'
+
+            if box_reg_pred is None:
+                show_results(img, bbox_pred, preds, scores, list(range(0, learn.data.c))
                              , bbox_gt, class_gt, (15, 15), titleA=str(gt_score), titleB=str(pred_score))
-            break
+            else:
+                pred_score_reg = f'BoxReg:{pred_score_classes_reg} \n Reg:{to_np(reg_pred):.2f}'
 
+                show_results_with_breg(img, bbox_pred, preds, box_reg_pred, scores, list(range(0, learn.data.c))
+                                       , bbox_gt, class_gt, (15, 15), titleA=str(gt_score), titleB=str(pred_score),
+                                       titleC=pred_score_reg)
+
+
+def show_results_with_breg(img, bbox_pred, preds, scores, breg_pred, classes, bbox_gt, preds_gt, figsize=(5,5)
+                 , titleA: str="", titleB: str="", titleC: str=""):
+
+    _, ax = plt.subplots(nrows=1, ncols=3, figsize=figsize)
+    ax[0].set_title(titleA)
+    ax[1].set_title(titleB)
+    ax[2].set_title(titleC)
+
+    # show gt
+    img.show(ax=ax[0])
+    for bbox, c in zip(bbox_gt, preds_gt):
+        txt = str(c.item()) if classes is None else classes[c.item()]
+        draw_rect(ax[0], [bbox[1],bbox[0],bbox[3],bbox[2]], text=f'{txt}')
+
+    # show prediction class
+    img.show(ax=ax[1])
+    if bbox_pred is not None:
+        for bbox, c, scr in zip(bbox_pred, preds, scores):
+            txt = str(c.item()) if classes is None else classes[c.item()]
+            draw_rect(ax[1], [bbox[1],bbox[0],bbox[3],bbox[2]], text=f'{txt} {scr.item():.1f}')
+
+    # show prediction class
+    img.show(ax=ax[2])
+    if bbox_pred is not None:
+        for bbox, c in zip(bbox_pred, breg_pred):
+            draw_rect(ax[1], [bbox[1],bbox[0],bbox[3],bbox[2]], text=f'{c.item():.1f}')
 
