@@ -225,7 +225,7 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
             else:
                 pred_score_reg = f'BoxReg:{pred_score_classes_reg} \n Reg:{to_np(reg_pred):.2f}'
 
-                show_results_with_breg(img, bbox_pred, preds, box_reg_pred, scores, list(range(0, learn.data.c))
+                show_results_with_breg(img, bbox_pred, preds, scores, box_reg_pred, list(range(0, learn.data.c))
                                        , bbox_gt, class_gt, (15, 15), titleA=str(gt_score), titleB=str(pred_score),
                                        titleC=pred_score_reg)
 
@@ -255,5 +255,5 @@ def show_results_with_breg(img, bbox_pred, preds, scores, breg_pred, classes, bb
     img.show(ax=ax[2])
     if bbox_pred is not None:
         for bbox, c in zip(bbox_pred, breg_pred):
-            draw_rect(ax[1], [bbox[1],bbox[0],bbox[3],bbox[2]], text=f'{c.item():.1f}')
+            draw_rect(ax[2], [bbox[1],bbox[0],bbox[3],bbox[2]], text=f'{c.item():.1f}')
 
