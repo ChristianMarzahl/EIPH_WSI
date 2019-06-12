@@ -50,7 +50,7 @@ class SlideContainer():
         class_id = np.random.choice(self.classes, 1)[0]
         ids = self.y[1] == class_id
         xmin, ymin, _, _ = np.array(self.y[0])[ids][randint(0, np.count_nonzero(ids) - 1)]
-        return int(xmin - self.shape / 2), int(ymin - self.height / 2)
+        return int(xmin - self.width / 2), int(ymin - self.height / 2)
 
 def bb_pad_collate_min(samples:BatchSamples, pad_idx:int=0) -> Tuple[FloatTensor, Tuple[LongTensor, LongTensor]]:
     "Function that collect `samples` of labelled bboxes and adds padding with `pad_idx`."
@@ -183,9 +183,9 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
 
         prediction_batch = learn.model(img_batch)
         class_pred_batch, bbox_pred_batch = prediction_batch[:2]
-        regression_pred_batch = prediction_batch[3].view(-1) if len(prediction_batch) >= 3 \
+        regression_pred_batch = prediction_batch[3].view(-1) if len(prediction_batch) > 3 \
             else [None] * class_pred_batch.shape[0]
-        bbox_regression_pred_batch = prediction_batch[4] if len(prediction_batch) >= 4 \
+        bbox_regression_pred_batch = prediction_batch[4] if len(prediction_batch) > 4 \
             else [None] * bbox_pred_batch.shape[0]
 
         bbox_gt_batch, class_gt_batch = target_batch
@@ -199,7 +199,8 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
             if bbox_pred is not None:
                 to_keep = nms(bbox_pred, scores, nms_thresh)
                 bbox_pred, preds, scores = bbox_pred[to_keep].cpu(), preds[to_keep].cpu(), scores[to_keep].cpu()
-                box_reg_pred = box_reg_pred[to_keep].cpu() if box_reg_pred[0] is not None else None
+                if box_reg_pred is not None:
+                    box_reg_pred = box_reg_pred[to_keep].cpu() if box_reg_pred[0] is not None else None
 
             t_sz = torch.Tensor([*img.size])[None].cpu()
             bbox_gt = bbox_gt[np.nonzero(class_gt)].squeeze(dim=1).cpu()
@@ -217,7 +218,8 @@ def slide_object_result(learn: Learner, anchors, detect_thresh:float=0.2, nms_th
             pred_score_classes_reg = f'{np.mean(to_np(box_reg_pred)):.2f}' if box_reg_pred is not None else '0.0'
             gt_score = f'{np.mean(to_np(class_gt)):.2f}' if class_gt.shape[0] > 0 else '0.0'
 
-            pred_score = pred_score if reg_pred is None else f'Box:{pred_score_classes} \n Reg:{to_np(reg_pred):.2f}'
+            pred_score = f'Box:{pred_score_classes}' if reg_pred is None \
+                else f'Box:{pred_score_classes} \n Reg:{to_np(reg_pred):.2f}'
 
             if box_reg_pred is None:
                 show_results(img, bbox_pred, preds, scores, list(range(0, learn.data.c))

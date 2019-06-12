@@ -2,7 +2,7 @@ import sys
 import tensorflow as tf
 import numpy as np
 
-ckpt_fpath = "model_ssd_mobilenet_v2/train/baseline_300/model.ckpt-0"
+ckpt_fpath = "model_rcnn_50/train/baseline_600_L0/model.ckpt-0"
 
 # Open TensorFlow ckpt
 reader = tf.train.NewCheckpointReader(ckpt_fpath)
