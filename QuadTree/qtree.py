@@ -115,10 +115,10 @@ class QuadTree:
 
             if use_percentages:
                 ax.annotate('{:1.1f}%'.format(prob), (cx, cy), color='red', weight='bold',
-                                fontsize=12, ha='center', va='center')
+                                 ha='center', va='center') #fontsize=12,
             else:
                 ax.annotate('{:1.2f}'.format(prob), (cx, cy), color='black', weight='bold',
-                            fontsize=12, ha='center', va='center')
+                           ha='center', va='center') #fontsize=12,
 
 
 
