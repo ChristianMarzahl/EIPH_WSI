@@ -2,7 +2,7 @@
 
 
 This repository contains code to replicate the results from the paper:
-[Deep Learning-Based Quantification of PulmonaryHemosiderophages in Cytology Slides](https://arxiv.org/abs/1908.04767) and links to corresponding jupyter notebooks. 
+[Deep Learning-Based Quantification of Pulmonary Hemosiderophages in Cytology Slides](https://www.nature.com/articles/s41598-020-65958-2) and links to corresponding jupyter notebooks. 
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=6azMAYpsyRw
