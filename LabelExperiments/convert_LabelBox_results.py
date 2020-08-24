@@ -18,7 +18,7 @@ from sklearn.neighbors import KDTree
 
 class ProjectType(Enum):
     Annotation = 1
-    Supervision = 2
+    CrowdAlgorithm = 2
     GroundTruth = 3
 
 class ImageType(Enum):
@@ -229,7 +229,7 @@ class ExpertResults:
 
     @property
     def project_type(self):
-        return ProjectType.Supervision if "Labels" in self.project_name else ProjectType.Annotation
+        return ProjectType.CrowdAlgorithm if "Labels" in self.project_name else ProjectType.Annotation
 
     def _iou(self, bb1, bb2):
         x1, y1, x2, y2 = bb1
@@ -376,7 +376,7 @@ class EIPH_Statistics:
                 temp = ExpertResults(file)
                 initials = temp.project_name.split('-')[0]
                 if initials not in results_experts:
-                    results_experts[initials] = {ProjectType.Annotation: None, ProjectType.Supervision: None}
+                    results_experts[initials] = {ProjectType.Annotation: None, ProjectType.CrowdAlgorithm: None}
 
                 results_experts[initials][temp.project_type] = temp
 
@@ -397,11 +397,15 @@ class EIPH_Statistics:
             "JM": LabelOrder.AS,
             "MB": LabelOrder.SA,
             "LJ": LabelOrder.AS,
+            "LM": LabelOrder.SA,
             "SO": LabelOrder.AS,
             "MS": LabelOrder.AS,
             "PA": LabelOrder.SA,
             "HJ": LabelOrder.SA,
-            "DL": LabelOrder.AS
+            "DL": LabelOrder.AS,
+            "JS": LabelOrder.AS,
+            "KJ": LabelOrder.AS,
+            "BT": LabelOrder.AS,
         }
 
         self.skill_level = {
@@ -419,10 +423,14 @@ class EIPH_Statistics:
             "DSS": 3,
             "JM": 1,
             "SO": 1,
+            "LM": 3,
             "MB": 3,
             "LJ": 3,
             "PA": 4,
             "MS": 4,
+            "JS": 1,
+            "KJ": 2,
+            "BT": 4,
             "DL": "DL"
         }
 
@@ -443,7 +451,7 @@ class EIPH_Statistics:
         for key in self.results_experts:
             initials = self.results_experts[key]
 
-            labels = initials[ProjectType.Supervision]
+            labels = initials[ProjectType.CrowdAlgorithm]
             no_labels = initials[ProjectType.Annotation]
 
 
@@ -453,7 +461,7 @@ class EIPH_Statistics:
                         image.calc_changes(self.ground_truth.images[image.external_id])
                     image_name, seconds, grade, grade_gt, image_type, acc = self._extract_image_statistics(image)
 
-                    data.append([key, self.skill_level[key], image_name, ProjectType.Supervision, self.label_order[key], seconds, grade, grade_gt,
+                    data.append([key, self.skill_level[key], image_name, ProjectType.CrowdAlgorithm, self.label_order[key], seconds, grade, grade_gt,
                                  image_type, acc, gt_num_cells, num_cells, unchanged_boxes, changed_grade, changed_boxes])
 
             if no_labels is not None:
@@ -470,7 +478,7 @@ class EIPH_Statistics:
                                            'Grade GT', 'ImageType', 'Acc', 'gt_num_cells', 'num_cells',
                                            'unchanged_boxes', 'changed_grade', 'changed_boxes'])
 
-    def calc_fleiss_kappa(self, project_type:ProjectType = ProjectType.Supervision):
+    def calc_fleiss_kappa(self, project_type:ProjectType = ProjectType.CrowdAlgorithm):
 
         images_dict = {}
 
@@ -547,12 +555,12 @@ class EIPH_Statistics:
         for key in self.results_experts:
             initials = self.results_experts[key]
 
-            labels = initials[ProjectType.Supervision]
+            labels = initials[ProjectType.CrowdAlgorithm]
             no_labels = initials[ProjectType.Annotation]
 
             if labels is not None:
                 row = self.extract_expert_metrics(key, labels)
-                data.append(list(row.values()) + [ProjectType.Supervision])
+                data.append(list(row.values()) + [ProjectType.CrowdAlgorithm])
 
             if no_labels is not None:
                 row = self.extract_expert_metrics(key, no_labels)
@@ -585,7 +593,7 @@ class EIPH_Statistics:
         for key in self.results_experts:
             initials = self.results_experts[key]
 
-            labels = initials[ProjectType.Supervision]
+            labels = initials[ProjectType.CrowdAlgorithm]
             no_labels = initials[ProjectType.Annotation]
 
             if labels is not None and no_labels is not None:
