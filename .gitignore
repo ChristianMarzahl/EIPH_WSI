@@ -105,9 +105,6 @@ venv.bak/
 DensityResults/*
 *.p
 *.svs
-Human_label.txt
-label.txt
-NewWorld.tif
 SDATA/Inference/test_TrainSREP-V2-Ablation.py
 SDATA/Inference/test_TrainSREP-V2.py
 SDATA/Statistics/EIPH_Annotations.pkl
