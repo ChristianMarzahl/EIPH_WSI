@@ -22,7 +22,7 @@ This repository is the baseline for multiple publication in the field of deep le
 
 ## [Deep Learning-Based Quantification of PulmonaryHemosiderophages in Cytology Slides](https://www.nature.com/articles/s41598-020-65958-2)
 
-For details, please visit the [SREP](SREP/README.md) section of this repository.
+For details, please visit the [SREP](SREP) section of this repository.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=6azMAYpsyRw" target="_blank"><img src="http://img.youtube.com/vi/6azMAYpsyRw/0.jpg" 
 alt="Object Detection" width="240" height="180" border="10" /></a>
@@ -33,7 +33,7 @@ alt="Object Detection" width="240" height="180" border="10" /></a>
 ## Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset
 
 
-For details, please visit the [SREP](SDATA/README.md) section of this repository.
+For details, please visit the [SREP](SDATA) section of this repository.
 
 <object data="SDATA/Paper/Overview.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="SDATA/Paper/Overview.pdf">
@@ -44,6 +44,6 @@ For details, please visit the [SREP](SDATA/README.md) section of this repository
 
 ## [Is Crowd-Algorithm Collaboration an Advanced Alternative to Crowd-Sourcing on Cytology Slides?](https://link.springer.com/chapter/10.1007/978-3-658-29267-6_5)
 
-For details, please visit the [SREP](SREP/README.md) section of this repository.
+For details, please visit the [SREP](BVM_2020) section of this repository.
 
 ![alt text](ReadmeImages/BVM2020.png "Crow-Algorithm collaborration.")
