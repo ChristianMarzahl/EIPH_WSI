@@ -1,0 +1,314 @@
+[30_EIPH_588355 Berliner Blau.png|Participant_11|2020-01-21 16:56:47.463827|1]
+[30_EIPH_588355 Berliner Blau.png|Participant_11|2020-01-21 16:00:03.324076|2]
+[30_EIPH_588355 Berliner Blau.png|Participant_11|2020-01-21 15:59:52.392663|1]
+[30_EIPH_568355 Turnbull blue.png|Participant_11|2020-01-21 16:56:47.329591|2]
+[30_EIPH_568355 Turnbull blue.png|Participant_11|2020-01-21 16:55:35.487927|1]
+[28_EIPH_569948 L berliner blau.png|Participant_11|2020-01-21 16:55:35.323710|2]
+[28_EIPH_569948 L berliner blau.png|Participant_11|2020-01-21 16:55:09.487162|1]
+[27_EIPH_571557 Turnbull blue.png|Participant_11|2020-01-21 16:55:09.078260|2]
+[27_EIPH_571557 Turnbull blue.png|Participant_11|2020-01-21 16:53:57.875490|1]
+[25_EIPH_568150 Turnbull blue.png|Participant_11|2020-01-21 16:53:57.554500|2]
+[25_EIPH_568150 Turnbull blue.png|Participant_11|2020-01-21 16:52:49.266876|1]
+[25_EIPH_568150 Berliner Blau.png|Participant_11|2020-01-21 16:52:49.058769|2]
+[25_EIPH_568150 Berliner Blau.png|Participant_11|2020-01-21 16:52:00.063491|1]
+[24_EIPH_576255 Turnbull blue.png|Participant_11|2020-01-21 16:51:59.895656|2]
+[24_EIPH_576255 Turnbull blue.png|Participant_11|2020-01-21 16:50:43.771971|1]
+[23_EIPH_563476 Turnbull blue.png|Participant_11|2020-01-21 16:50:43.378500|2]
+[23_EIPH_563476 Turnbull blue.png|Participant_11|2020-01-21 16:49:18.569827|1]
+[23_EIPH_563476 Berliner Blau-001.png|Participant_11|2020-01-21 16:49:18.260863|2]
+[23_EIPH_563476 Berliner Blau-001.png|Participant_11|2020-01-21 16:47:03.764190|1]
+[19_EIPH_566933 L Tunrbull blue.png|Participant_11|2020-01-21 16:47:03.479376|2]
+[19_EIPH_566933 L Tunrbull blue.png|Participant_11|2020-01-21 16:45:39.818334|1]
+[19_EIPH_566933 L Berliner Blau.png|Participant_11|2020-01-21 16:45:39.602975|2]
+[19_EIPH_566933 L Berliner Blau.png|Participant_11|2020-01-21 16:44:56.224926|1]
+[17_EIPH_575796 Turnbull blue.png|Participant_11|2020-01-21 16:44:55.998498|2]
+[17_EIPH_575796 Turnbull blue.png|Participant_11|2020-01-21 16:43:31.667092|1]
+[15_EIPH_568320 Turnbull blue.png|Participant_11|2020-01-21 16:43:31.340050|2]
+[15_EIPH_568320 Turnbull blue.png|Participant_11|2020-01-21 16:41:52.564715|1]
+[15_EIPH_568320 Turnbull blue.png|Participant_11|2020-01-21 16:38:43.004956|2]
+[15_EIPH_568320 Turnbull blue.png|Participant_11|2020-01-21 16:09:55.305042|1]
+[15_EIPH_568320 berliner blau.png|Participant_11|2020-01-21 16:41:52.426795|2]
+[15_EIPH_568320 berliner blau.png|Participant_11|2020-01-21 16:41:49.705942|1]
+[15_EIPH_568320 berliner blau.png|Participant_11|2020-01-21 16:09:54.919819|2]
+[15_EIPH_568320 berliner blau.png|Participant_11|2020-01-21 16:09:03.178714|1]
+[14_EIPH_568381 berliner blau-001.png|Participant_11|2020-01-21 16:41:49.559562|2]
+[14_EIPH_568381 berliner blau-001.png|Participant_11|2020-01-21 16:41:48.370490|1]
+[14_EIPH_568381 berliner blau-001.png|Participant_11|2020-01-21 16:09:02.784522|2]
+[14_EIPH_568381 berliner blau-001.png|Participant_11|2020-01-21 16:08:02.260880|1]
+[13_EIPH_570370 Berliner Blau.png|Participant_11|2020-01-21 16:41:48.174485|2]
+[13_EIPH_570370 Berliner Blau.png|Participant_11|2020-01-21 16:41:46.182498|1]
+[13_EIPH_570370 Berliner Blau.png|Participant_11|2020-01-21 16:08:01.796406|2]
+[13_EIPH_570370 Berliner Blau.png|Participant_11|2020-01-21 16:06:28.501279|1]
+[08_EIPH_574999 Berliner Blau.png|Participant_11|2020-01-21 16:41:46.004646|2]
+[08_EIPH_574999 Berliner Blau.png|Participant_11|2020-01-21 16:41:42.637059|1]
+[08_EIPH_574999 Berliner Blau.png|Participant_11|2020-01-21 16:06:28.012120|2]
+[08_EIPH_574999 Berliner Blau.png|Participant_11|2020-01-21 16:04:54.534475|1]
+[04_EIPH_567017 Turnbull blue-001.png|Participant_11|2020-01-21 16:41:42.461933|2]
+[04_EIPH_567017 Turnbull blue-001.png|Participant_11|2020-01-21 16:40:49.394481|1]
+[04_EIPH_567017 Turnbull blue-001.png|Participant_11|2020-01-21 16:04:54.394718|2]
+[04_EIPH_567017 Turnbull blue-001.png|Participant_11|2020-01-21 16:04:47.603350|1]
+[02_EIPH_574162 Turnbull blue-001.png|Participant_11|2020-01-21 16:40:49.251463|2]
+[02_EIPH_574162 Turnbull blue-001.png|Participant_11|2020-01-21 16:39:46.719261|1]
+[02_EIPH_574162 Turnbull blue-001.png|Participant_11|2020-01-21 16:04:47.532440|2]
+[02_EIPH_574162 Turnbull blue-001.png|Participant_11|2020-01-21 16:04:44.250656|1]
+[01_EIPH_563479 Turnbull blue.png|Participant_11|2020-01-21 16:39:46.535954|2]
+[01_EIPH_563479 Turnbull blue.png|Participant_11|2020-01-21 16:38:43.216699|1]
+[01_EIPH_563479 Turnbull blue.png|Participant_11|2020-01-21 16:04:43.933870|2]
+[01_EIPH_563479 Turnbull blue.png|Participant_11|2020-01-21 16:03:38.373377|1]
+[01_EIPH_563479 Turnbull blue.png|Participant_11|2020-01-21 16:00:03.748124|1]
+
+
+30_EIPH_588355 Berliner Blau.png|0|{"x1": "0","y1": "30","x2": "21","y2": "56",}|Participant_11|2020-01-21 16:57:27.599907|Participant_11|2020-01-21 16:57:40.845154|100ae8fb-48be-4233-a689-71aba5f0be59|False|256|256
+30_EIPH_588355 Berliner Blau.png|0|{"x1": "114","y1": "50","x2": "141","y2": "77",}|Participant_11|2020-01-21 16:57:21.974124|Participant_11|2020-01-21 16:57:21.974150|6a0bf553-f89c-4e4c-b8e2-bcd3cc51fd10|False|256|256
+30_EIPH_588355 Berliner Blau.png|0|{"x1": "94","y1": "145","x2": "121","y2": "172",}|Participant_11|2020-01-21 16:57:20.493832|Participant_11|2020-01-21 16:57:44.819428|0120dbc9-6236-410b-a8ee-dc5603fa2a84|False|256|256
+30_EIPH_588355 Berliner Blau.png|0|{"x1": "87","y1": "195","x2": "114","y2": "222",}|Participant_11|2020-01-21 16:57:18.359909|Participant_11|2020-01-21 16:57:19.081882|a4189a81-6737-4938-b68c-2d9d9a652908|False|256|256
+30_EIPH_588355 Berliner Blau.png|1|{"x1": "16","y1": "192","x2": "43","y2": "219",}|Participant_11|2020-01-21 16:57:17.559713|Participant_11|2020-01-21 16:57:17.559746|4dafcd3d-f16e-41d1-89f0-bf3bdb56e320|False|256|256
+30_EIPH_588355 Berliner Blau.png|1|{"x1": "15","y1": "16","x2": "39","y2": "39",}|Participant_11|2020-01-21 16:57:15.513684|Participant_11|2020-01-21 16:57:35.680996|1dbe085d-d00e-4f98-8834-7066def23c6a|False|256|256
+30_EIPH_588355 Berliner Blau.png|1|{"x1": "91","y1": "17","x2": "110","y2": "36",}|Participant_11|2020-01-21 16:57:13.765441|Participant_11|2020-01-21 16:57:31.448737|e9b0852f-2821-4ca2-b8b3-130f28593b45|False|256|256
+30_EIPH_588355 Berliner Blau.png|1|{"x1": "212","y1": "5","x2": "239","y2": "32",}|Participant_11|2020-01-21 16:57:11.598239|Participant_11|2020-01-21 16:57:12.874087|829d8621-859f-4ea3-a2b6-320ecc550aae|False|256|256
+30_EIPH_588355 Berliner Blau.png|2|{"x1": "210","y1": "237","x2": "237","y2": "256",}|Participant_11|2020-01-21 16:57:01.704730|Participant_11|2020-01-21 16:57:01.704759|0b1c6132-cc34-4cce-8dc0-6b3f29eddc83|False|256|256
+30_EIPH_588355 Berliner Blau.png|2|{"x1": "130","y1": "151","x2": "153","y2": "168",}|Participant_11|2020-01-21 16:56:58.596937|Participant_11|2020-01-21 16:57:07.865264|4ec68d8c-b6bf-4475-8937-5b580387b179|False|256|256
+30_EIPH_588355 Berliner Blau.png|2|{"x1": "126","y1": "91","x2": "153","y2": "118",}|Participant_11|2020-01-21 16:56:57.770163|Participant_11|2020-01-21 16:56:57.770190|a55c6eba-139b-4fd1-bf0a-6affc2508fe1|False|256|256
+30_EIPH_588355 Berliner Blau.png|2|{"x1": "52","y1": "143","x2": "79","y2": "170",}|Participant_11|2020-01-21 16:56:56.303851|Participant_11|2020-01-21 16:56:57.075908|0d4df4f3-bd69-4381-8201-a84b2791e6ee|False|256|256
+30_EIPH_588355 Berliner Blau.png|4|{"x1": "131","y1": "127","x2": "149","y2": "150",}|Participant_11|2020-01-21 16:56:49.876640|Participant_11|2020-01-21 16:56:55.168220|f8119129-0215-4cda-b03c-d82fa8ec286b|False|256|256
+30_EIPH_568355 Turnbull blue.png|2|{"x1": "224","y1": "12","x2": "243","y2": "33",}|Participant_11|2020-01-21 16:56:46.129064|Participant_11|2020-01-21 16:56:46.129090|4292b651-a319-4176-b68e-7d167a1167a0|False|256|256
+30_EIPH_568355 Turnbull blue.png|2|{"x1": "137","y1": "65","x2": "157","y2": "85",}|Participant_11|2020-01-21 16:56:30.817680|Participant_11|2020-01-21 16:56:36.775638|4864705f-6c42-4b40-93db-b684919caeee|False|256|256
+30_EIPH_568355 Turnbull blue.png|4|{"x1": "120","y1": "131","x2": "158","y2": "158",}|Participant_11|2020-01-21 16:56:22.535736|Participant_11|2020-01-21 16:56:26.000574|41e685d8-fafd-4751-84a6-2e6486f951e2|False|256|256
+30_EIPH_568355 Turnbull blue.png|2|{"x1": "106","y1": "24","x2": "126","y2": "44",}|Participant_11|2020-01-21 16:56:16.547934|Participant_11|2020-01-21 16:56:17.404953|94345aa2-d2d6-4fbe-8259-815ed108ce21|False|256|256
+30_EIPH_568355 Turnbull blue.png|3|{"x1": "127","y1": "36","x2": "149","y2": "55",}|Participant_11|2020-01-21 16:56:10.196383|Participant_11|2020-01-21 16:56:10.886716|72c56c0f-47f6-4668-8dc6-622a55fb2e5d|False|256|256
+30_EIPH_568355 Turnbull blue.png|2|{"x1": "122","y1": "98","x2": "144","y2": "118",}|Participant_11|2020-01-21 16:56:06.738436|Participant_11|2020-01-21 16:56:07.361920|e392d071-babf-438d-9b1e-876ef677346f|False|256|256
+30_EIPH_568355 Turnbull blue.png|1|{"x1": "226","y1": "151","x2": "249","y2": "173",}|Participant_11|2020-01-21 16:56:03.591945|Participant_11|2020-01-21 16:56:03.591980|c34ebe56-073d-4274-b842-404fc39e327e|False|256|256
+30_EIPH_568355 Turnbull blue.png|1|{"x1": "239","y1": "223","x2": "255","y2": "249",}|Participant_11|2020-01-21 16:55:59.322159|Participant_11|2020-01-21 16:55:59.322185|d4897e86-f9eb-48d4-aa5d-9780ef58ead7|False|256|256
+30_EIPH_568355 Turnbull blue.png|1|{"x1": "54","y1": "179","x2": "81","y2": "206",}|Participant_11|2020-01-21 16:55:53.695971|Participant_11|2020-01-21 16:55:53.696001|2c7143b0-ad13-4afe-8efa-cabd82856fd0|False|256|256
+30_EIPH_568355 Turnbull blue.png|1|{"x1": "156","y1": "193","x2": "183","y2": "220",}|Participant_11|2020-01-21 16:55:50.582662|Participant_11|2020-01-21 16:55:50.582700|fa3abc6a-86a4-4e75-956c-85d3a6b0cfdf|False|256|256
+30_EIPH_568355 Turnbull blue.png|1|{"x1": "81","y1": "46","x2": "108","y2": "73",}|Participant_11|2020-01-21 16:55:48.463067|Participant_11|2020-01-21 16:55:49.247167|b4d9fed9-f509-43a3-9b4b-f3176c3f757a|False|256|256
+30_EIPH_568355 Turnbull blue.png|0|{"x1": "140","y1": "18","x2": "162","y2": "39",}|Participant_11|2020-01-21 16:55:47.551826|Participant_11|2020-01-21 16:55:47.551862|bc07178b-7aaa-4411-98ce-3c8e1627b5ea|False|256|256
+30_EIPH_568355 Turnbull blue.png|0|{"x1": "217","y1": "56","x2": "244","y2": "83",}|Participant_11|2020-01-21 16:55:43.731194|Participant_11|2020-01-21 16:55:43.731252|c34b9737-bda3-4772-8ba7-0b7d6e6fb968|False|256|256
+30_EIPH_568355 Turnbull blue.png|0|{"x1": "181","y1": "65","x2": "208","y2": "92",}|Participant_11|2020-01-21 16:55:42.467775|Participant_11|2020-01-21 16:55:42.467805|a2dfad1c-e01e-4398-a115-8f981cabf640|False|256|256
+30_EIPH_568355 Turnbull blue.png|0|{"x1": "20","y1": "123","x2": "53","y2": "153",}|Participant_11|2020-01-21 16:55:41.558034|Participant_11|2020-01-21 16:55:41.558060|ebad72b7-99a1-4382-9572-d95bc81ff629|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "155","y1": "72","x2": "182","y2": "99",}|Participant_11|2020-01-21 16:55:35.141349|Participant_11|2020-01-21 16:55:35.141384|0caa4393-6b66-4a2e-bfbd-b7343db36c33|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "1","y1": "70","x2": "28","y2": "97",}|Participant_11|2020-01-21 16:55:30.878123|Participant_11|2020-01-21 16:55:30.878148|53def7bb-98a6-4ed5-90e7-930c18581fc9|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "60","y1": "227","x2": "87","y2": "254",}|Participant_11|2020-01-21 16:55:29.636193|Participant_11|2020-01-21 16:55:29.636220|bfbc19e1-66e6-41e7-a0fa-3293586f573f|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "198","y1": "193","x2": "225","y2": "220",}|Participant_11|2020-01-21 16:55:27.754541|Participant_11|2020-01-21 16:55:27.754567|53e1d587-246d-4483-acc6-2fd9282edbad|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "134","y1": "144","x2": "161","y2": "171",}|Participant_11|2020-01-21 16:55:26.377443|Participant_11|2020-01-21 16:55:26.377480|fa4c0225-cba1-41ed-85fd-4b76a0be7f8f|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "73","y1": "184","x2": "100","y2": "211",}|Participant_11|2020-01-21 16:55:25.583249|Participant_11|2020-01-21 16:55:25.583286|20599462-44d7-4ea6-8ddc-f474cf8c216b|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "27","y1": "205","x2": "54","y2": "232",}|Participant_11|2020-01-21 16:55:24.788592|Participant_11|2020-01-21 16:55:24.788632|bd72d5e0-c5f2-493f-ad4d-205e89cbc2be|False|256|256
+28_EIPH_569948 L berliner blau.png|0|{"x1": "24","y1": "155","x2": "51","y2": "182",}|Participant_11|2020-01-21 16:55:23.258994|Participant_11|2020-01-21 16:55:24.032623|9ed15108-862b-495f-ac6d-9da55256d256|False|256|256
+28_EIPH_569948 L berliner blau.png|1|{"x1": "121","y1": "129","x2": "144","y2": "150",}|Participant_11|2020-01-21 16:55:21.829924|Participant_11|2020-01-21 16:55:21.829954|7b07bdc1-6886-42c1-b00c-5c2b5012312c|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "77","y1": "130","x2": "102","y2": "154",}|Participant_11|2020-01-21 16:54:28.564305|Participant_11|2020-01-21 16:55:05.856776|bdd01a96-18a6-443b-ba3a-d1a323827048|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "65","y1": "104","x2": "92","y2": "131",}|Participant_11|2020-01-21 16:54:29.200941|Participant_11|2020-01-21 16:54:52.804591|630fd5c7-47ab-49e4-be5a-6df1e7a3ed31|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "53","y1": "79","x2": "80","y2": "106",}|Participant_11|2020-01-21 16:54:30.026268|Participant_11|2020-01-21 16:54:51.571706|74303c2d-9549-4485-a401-b50fcb926c40|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "119","y1": "19","x2": "143","y2": "40",}|Participant_11|2020-01-21 16:54:43.458863|Participant_11|2020-01-21 16:54:48.429414|dbc43d0f-802c-4a4b-80d4-2d9d5f9f0bac|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "160","y1": "-6","x2": "187","y2": "21",}|Participant_11|2020-01-21 16:54:41.276987|Participant_11|2020-01-21 16:54:41.277019|8b406ad1-07f1-4c63-9935-bbd1a8f34d72|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "132","y1": "9","x2": "159","y2": "36",}|Participant_11|2020-01-21 16:54:40.405523|Participant_11|2020-01-21 16:54:42.462237|66fdb938-ab41-4656-9c0a-f9581fc384d0|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "149","y1": "161","x2": "172","y2": "180",}|Participant_11|2020-01-21 16:54:39.785697|Participant_11|2020-01-21 16:55:08.896079|30e059a3-7115-4477-90d4-952239f20a1c|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "19","y1": "72","x2": "46","y2": "99",}|Participant_11|2020-01-21 16:54:31.286851|Participant_11|2020-01-21 16:54:31.286888|75e0b374-6129-401e-90a3-ee5699cb046f|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "27","y1": "129","x2": "54","y2": "156",}|Participant_11|2020-01-21 16:54:27.771952|Participant_11|2020-01-21 16:54:27.771998|be9f7827-62d8-436f-ae3c-6927cd03469a|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "33","y1": "164","x2": "60","y2": "191",}|Participant_11|2020-01-21 16:54:26.998908|Participant_11|2020-01-21 16:54:26.998946|781a31f5-3849-46ca-bef8-b8640b96e3e9|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "23","y1": "227","x2": "50","y2": "254",}|Participant_11|2020-01-21 16:54:26.396481|Participant_11|2020-01-21 16:54:26.396507|ee4c7a76-5316-48e2-8714-7cfe4f4fa986|False|256|256
+27_EIPH_571557 Turnbull blue.png|0|{"x1": "23","y1": "227","x2": "50","y2": "254",}|Participant_11|2020-01-21 16:54:25.819577|Participant_11|2020-01-21 16:54:25.819611|f48695f7-32cd-4eba-ab05-914d791093ee|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "209","y1": "188","x2": "236","y2": "215",}|Participant_11|2020-01-21 16:54:24.356155|Participant_11|2020-01-21 16:54:24.356180|a31142c3-78d2-4f3f-a8df-e15b11e74c2b|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "178","y1": "187","x2": "201","y2": "209",}|Participant_11|2020-01-21 16:54:20.898918|Participant_11|2020-01-21 16:54:20.898953|86e8e53a-fb08-4306-80c0-1df5cb767872|False|256|256
+27_EIPH_571557 Turnbull blue.png|1|{"x1": "128","y1": "30","x2": "151","y2": "52",}|Participant_11|2020-01-21 16:54:06.273629|Participant_11|2020-01-21 16:54:19.048057|ebb31f3a-30e8-4014-8a9e-5ecd6d288609|False|256|256
+27_EIPH_571557 Turnbull blue.png|3|{"x1": "129","y1": "131","x2": "164","y2": "166",}|Participant_11|2020-01-21 16:54:04.860302|Participant_11|2020-01-21 16:54:32.077385|55e7896f-b44e-4878-a8b6-5ba40f7c764c|False|256|256
+25_EIPH_568150 Turnbull blue.png|3|{"x1": "164","y1": "121","x2": "191","y2": "148",}|Participant_11|2020-01-21 16:53:06.180530|Participant_11|2020-01-21 16:53:57.269755|e07c27c4-07d1-4eca-b9df-7dd0f5e58741|False|256|256
+25_EIPH_568150 Turnbull blue.png|1|{"x1": "82","y1": "235","x2": "109","y2": "262",}|Participant_11|2020-01-21 16:53:42.706050|Participant_11|2020-01-21 16:53:53.812282|c98543e5-acd9-40c3-99ab-19b224e273c9|False|256|256
+25_EIPH_568150 Turnbull blue.png|0|{"x1": "133","y1": "3","x2": "160","y2": "30",}|Participant_11|2020-01-21 16:53:40.228103|Participant_11|2020-01-21 16:53:40.228139|16d3777f-5a40-405a-b7b1-3108931dc9ff|False|256|256
+25_EIPH_568150 Turnbull blue.png|0|{"x1": "180","y1": "161","x2": "207","y2": "188",}|Participant_11|2020-01-21 16:53:29.872070|Participant_11|2020-01-21 16:53:32.673083|c2046a74-9e79-43ac-9e38-4048c92afba2|False|256|256
+25_EIPH_568150 Turnbull blue.png|2|{"x1": "228","y1": "23","x2": "251","y2": "45",}|Participant_11|2020-01-21 16:53:21.345226|Participant_11|2020-01-21 16:53:28.672450|86529177-5b0d-4800-9e13-3e4659ad5b1a|False|256|256
+25_EIPH_568150 Turnbull blue.png|1|{"x1": "133","y1": "201","x2": "160","y2": "228",}|Participant_11|2020-01-21 16:53:18.123313|Participant_11|2020-01-21 16:53:41.651868|8ddebb9b-20e3-4d36-839a-5bb9fac3d3a1|False|256|256
+25_EIPH_568150 Turnbull blue.png|1|{"x1": "141","y1": "168","x2": "168","y2": "195",}|Participant_11|2020-01-21 16:53:14.052655|Participant_11|2020-01-21 16:53:14.052690|9db59252-bc78-4dcf-9357-ea2ed2535a22|False|256|256
+25_EIPH_568150 Turnbull blue.png|1|{"x1": "185","y1": "210","x2": "209","y2": "234",}|Participant_11|2020-01-21 16:53:10.408548|Participant_11|2020-01-21 16:53:13.518803|6cef1662-95cb-4074-9e8c-9948809a42be|False|256|256
+25_EIPH_568150 Turnbull blue.png|2|{"x1": "205","y1": "167","x2": "232","y2": "203",}|Participant_11|2020-01-21 16:53:09.392117|Participant_11|2020-01-21 16:53:09.392143|5c2fb4ca-db70-4593-9eca-ea3bae34e204|False|256|256
+25_EIPH_568150 Turnbull blue.png|2|{"x1": "179","y1": "107","x2": "206","y2": "134",}|Participant_11|2020-01-21 16:53:04.583817|Participant_11|2020-01-21 16:53:04.583840|5a83482c-dd36-43a7-92bb-459567b690d3|False|256|256
+25_EIPH_568150 Turnbull blue.png|2|{"x1": "142","y1": "72","x2": "169","y2": "104",}|Participant_11|2020-01-21 16:53:02.955364|Participant_11|2020-01-21 16:53:02.955393|f6e468dd-a5f9-418a-9744-6b08c14e7986|False|256|256
+25_EIPH_568150 Turnbull blue.png|2|{"x1": "81","y1": "111","x2": "117","y2": "146",}|Participant_11|2020-01-21 16:53:00.332794|Participant_11|2020-01-21 16:53:00.930209|5c7ae336-cf83-4281-babb-5f1037e5635c|False|256|256
+25_EIPH_568150 Turnbull blue.png|4|{"x1": "125","y1": "131","x2": "159","y2": "165",}|Participant_11|2020-01-21 16:52:56.336784|Participant_11|2020-01-21 16:52:56.336817|636949a8-af88-4a7f-b517-20c0ae4e01bf|False|256|256
+25_EIPH_568150 Berliner Blau.png|4|{"x1": "166","y1": "-9","x2": "193","y2": "18",}|Participant_11|2020-01-21 16:52:30.249384|Participant_11|2020-01-21 16:52:48.855719|6bd56ef2-de32-452a-9270-6405fd9b4fb5|False|256|256
+25_EIPH_568150 Berliner Blau.png|4|{"x1": "122","y1": "-10","x2": "149","y2": "17",}|Participant_11|2020-01-21 16:52:32.828934|Participant_11|2020-01-21 16:52:38.766793|eb8f2e2c-abe2-4cdb-9273-ced3da998d8e|False|256|256
+25_EIPH_568150 Berliner Blau.png|2|{"x1": "124","y1": "10","x2": "151","y2": "37",}|Participant_11|2020-01-21 16:52:27.859078|Participant_11|2020-01-21 16:52:29.179170|8cc72cfd-e237-4db1-ba8d-2da67ceb46fa|False|256|256
+25_EIPH_568150 Berliner Blau.png|1|{"x1": "147","y1": "3","x2": "174","y2": "30",}|Participant_11|2020-01-21 16:52:26.808113|Participant_11|2020-01-21 16:52:26.808143|47b9f40d-de9f-44c8-bc97-24a25bb713f2|False|256|256
+25_EIPH_568150 Berliner Blau.png|1|{"x1": "175","y1": "102","x2": "202","y2": "129",}|Participant_11|2020-01-21 16:52:21.799241|Participant_11|2020-01-21 16:52:21.799274|f15c1429-7a61-461f-9761-a029587115f2|False|256|256
+25_EIPH_568150 Berliner Blau.png|1|{"x1": "193","y1": "124","x2": "220","y2": "151",}|Participant_11|2020-01-21 16:52:17.425958|Participant_11|2020-01-21 16:52:17.953879|9f03a9a9-88a6-43b0-8b86-3fcc789c670a|False|256|256
+25_EIPH_568150 Berliner Blau.png|3|{"x1": "0","y1": "172","x2": "23","y2": "199",}|Participant_11|2020-01-21 16:52:15.495076|Participant_11|2020-01-21 16:52:16.508325|9659952e-667f-437c-ab0a-b1e869d1fd66|False|256|256
+25_EIPH_568150 Berliner Blau.png|2|{"x1": "56","y1": "146","x2": "93","y2": "170",}|Participant_11|2020-01-21 16:52:10.281865|Participant_11|2020-01-21 16:52:13.158065|37c06ad7-6641-4828-b877-661dbc99393a|False|256|256
+25_EIPH_568150 Berliner Blau.png|3|{"x1": "97","y1": "34","x2": "124","y2": "61",}|Participant_11|2020-01-21 16:52:07.746783|Participant_11|2020-01-21 16:52:09.208167|bc752ec5-09bb-411f-a231-4045639e2de3|False|256|256
+25_EIPH_568150 Berliner Blau.png|4|{"x1": "133","y1": "131","x2": "160","y2": "158",}|Participant_11|2020-01-21 16:52:04.729796|Participant_11|2020-01-21 16:52:05.692272|3f652e68-4605-40d6-8bcc-43e4aff3e903|False|256|256
+25_EIPH_568150 Berliner Blau.png|3|{"x1": "141","y1": "183","x2": "168","y2": "210",}|Participant_11|2020-01-21 16:52:02.687539|Participant_11|2020-01-21 16:52:03.485348|07c3db55-c3a8-458a-a68b-7509a96767ee|False|256|256
+24_EIPH_576255 Turnbull blue.png|1|{"x1": "166","y1": "14","x2": "193","y2": "41",}|Participant_11|2020-01-21 16:51:40.872394|Participant_11|2020-01-21 16:51:59.789740|078678ee-b433-40fb-8397-ab20789e295c|False|256|256
+24_EIPH_576255 Turnbull blue.png|0|{"x1": "132","y1": "123","x2": "146","y2": "141",}|Participant_11|2020-01-21 16:51:52.938104|Participant_11|2020-01-21 16:51:52.938140|8a5d530d-815a-4577-be7e-fafb34eab933|False|256|256
+24_EIPH_576255 Turnbull blue.png|0|{"x1": "164","y1": "79","x2": "188","y2": "103",}|Participant_11|2020-01-21 16:51:45.352885|Participant_11|2020-01-21 16:51:45.352924|1a4cf132-02ce-4a95-9bdc-5c884b5d3efb|False|256|256
+24_EIPH_576255 Turnbull blue.png|3|{"x1": "177","y1": "0","x2": "194","y2": "15",}|Participant_11|2020-01-21 16:51:35.598343|Participant_11|2020-01-21 16:51:39.355613|0e2a1d30-4f7f-40db-9f58-45ef2027e663|False|256|256
+24_EIPH_576255 Turnbull blue.png|1|{"x1": "0","y1": "35","x2": "18","y2": "59",}|Participant_11|2020-01-21 16:51:34.033712|Participant_11|2020-01-21 16:51:34.033737|b5e7bf61-9436-410c-ab5e-b0ca683ae15d|False|256|256
+24_EIPH_576255 Turnbull blue.png|1|{"x1": "165","y1": "106","x2": "185","y2": "130",}|Participant_11|2020-01-21 16:51:22.626023|Participant_11|2020-01-21 16:51:25.879812|d9888468-15ca-4468-924a-d2d9c44a6d0f|False|256|256
+24_EIPH_576255 Turnbull blue.png|2|{"x1": "49","y1": "193","x2": "69","y2": "217",}|Participant_11|2020-01-21 16:51:21.560107|Participant_11|2020-01-21 16:51:21.560140|adcac4bc-eaf7-491e-8a55-12cb41a4c705|False|256|256
+24_EIPH_576255 Turnbull blue.png|2|{"x1": "14","y1": "203","x2": "49","y2": "232",}|Participant_11|2020-01-21 16:51:17.325421|Participant_11|2020-01-21 16:51:17.325455|b45cf990-e1c3-4f2b-8ef5-725639fbe314|False|256|256
+24_EIPH_576255 Turnbull blue.png|2|{"x1": "231","y1": "229","x2": "255","y2": "250",}|Participant_11|2020-01-21 16:51:13.875882|Participant_11|2020-01-21 16:51:14.745885|9a8b8a63-1fc3-470e-ab79-5d674541086a|False|256|256
+24_EIPH_576255 Turnbull blue.png|3|{"x1": "214","y1": "98","x2": "241","y2": "125",}|Participant_11|2020-01-21 16:51:07.667319|Participant_11|2020-01-21 16:51:07.667360|d7fbc681-bbac-429f-be4d-0430b0817344|False|256|256
+24_EIPH_576255 Turnbull blue.png|3|{"x1": "87","y1": "32","x2": "123","y2": "70",}|Participant_11|2020-01-21 16:51:03.279771|Participant_11|2020-01-21 16:51:03.279795|462e0601-a872-4822-81ce-e03119e26f09|False|256|256
+24_EIPH_576255 Turnbull blue.png|3|{"x1": "174","y1": "234","x2": "201","y2": "261",}|Participant_11|2020-01-21 16:50:56.959152|Participant_11|2020-01-21 16:50:56.959175|83a57826-0705-4c43-b695-6ed77828ca10|False|256|256
+24_EIPH_576255 Turnbull blue.png|3|{"x1": "193","y1": "154","x2": "220","y2": "181",}|Participant_11|2020-01-21 16:50:53.770613|Participant_11|2020-01-21 16:50:54.502854|73bef978-8e76-4ece-97e0-182fe86f3aac|False|256|256
+24_EIPH_576255 Turnbull blue.png|4|{"x1": "133","y1": "130","x2": "169","y2": "168",}|Participant_11|2020-01-21 16:50:49.299426|Participant_11|2020-01-21 16:50:50.283641|f0956df8-3f2b-4e0c-9fa1-768cd46bae81|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "153","y1": "143","x2": "173","y2": "163",}|Participant_11|2020-01-21 16:50:26.051119|Participant_11|2020-01-21 16:50:43.247556|200cbfd6-08bd-46f5-a56c-c0d94724fbf9|False|256|256
+23_EIPH_563476 Turnbull blue.png|0|{"x1": "185","y1": "225","x2": "212","y2": "252",}|Participant_11|2020-01-21 16:50:13.932346|Participant_11|2020-01-21 16:50:15.836424|ff1fdbb4-f21f-4df1-babb-dc0e98732b7c|False|256|256
+23_EIPH_563476 Turnbull blue.png|1|{"x1": "0","y1": "99","x2": "28","y2": "122",}|Participant_11|2020-01-21 16:50:07.166074|Participant_11|2020-01-21 16:50:12.672438|d3b06ed8-d0d8-4e74-96c7-e2f4625a14dd|False|256|256
+23_EIPH_563476 Turnbull blue.png|0|{"x1": "17","y1": "112","x2": "36","y2": "135",}|Participant_11|2020-01-21 16:50:06.200012|Participant_11|2020-01-21 16:50:06.200051|0546b946-9d58-473d-a3a3-2f700d9cda95|False|256|256
+23_EIPH_563476 Turnbull blue.png|0|{"x1": "102","y1": "60","x2": "118","y2": "82",}|Participant_11|2020-01-21 16:50:04.112063|Participant_11|2020-01-21 16:50:04.112088|75c48dc0-ba88-4920-b467-394b8b767e16|False|256|256
+23_EIPH_563476 Turnbull blue.png|0|{"x1": "169","y1": "26","x2": "191","y2": "45",}|Participant_11|2020-01-21 16:50:01.556896|Participant_11|2020-01-21 16:50:01.556926|89536375-bca5-425f-9ddf-2be06e578631|False|256|256
+23_EIPH_563476 Turnbull blue.png|0|{"x1": "169","y1": "170","x2": "196","y2": "197",}|Participant_11|2020-01-21 16:49:56.927594|Participant_11|2020-01-21 16:49:58.208129|d7aa7ce6-8822-4171-965b-8b7c39c89bd2|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "95","y1": "125","x2": "118","y2": "150",}|Participant_11|2020-01-21 16:49:54.763178|Participant_11|2020-01-21 16:49:54.763236|76d54afe-bb88-4200-83be-825aeca0a0b3|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "104","y1": "104","x2": "124","y2": "123",}|Participant_11|2020-01-21 16:49:49.852552|Participant_11|2020-01-21 16:49:50.742985|1631b42b-8bac-41d1-b7aa-b1bf52f131c9|False|256|256
+23_EIPH_563476 Turnbull blue.png|2|{"x1": "14","y1": "153","x2": "39","y2": "177",}|Participant_11|2020-01-21 16:49:39.859239|Participant_11|2020-01-21 16:49:47.176580|18c2a4db-7abd-42a7-aa56-3742501f6e91|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "13","y1": "218","x2": "35","y2": "238",}|Participant_11|2020-01-21 16:49:37.822038|Participant_11|2020-01-21 16:49:43.902328|a8c7b273-417a-47ef-83f0-41a4ab073528|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "62","y1": "190","x2": "80","y2": "214",}|Participant_11|2020-01-21 16:49:37.059825|Participant_11|2020-01-21 16:49:41.170474|63ceec4f-f398-432d-abc6-9c131c45dbb1|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "221","y1": "143","x2": "248","y2": "170",}|Participant_11|2020-01-21 16:49:36.301044|Participant_11|2020-01-21 16:49:36.301069|260cc1bc-3eb1-48d1-ac15-0b08083b6256|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "192","y1": "159","x2": "216","y2": "182",}|Participant_11|2020-01-21 16:49:34.788813|Participant_11|2020-01-21 16:49:55.923393|cbcca2f1-c292-4f36-9e7f-1ff27a5d495d|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "175","y1": "140","x2": "202","y2": "167",}|Participant_11|2020-01-21 16:49:33.467787|Participant_11|2020-01-21 16:49:33.467812|5c3f3e76-7b0b-4a24-97c5-91e7b4f93b0a|False|256|256
+23_EIPH_563476 Turnbull blue.png|3|{"x1": "131","y1": "134","x2": "158","y2": "161",}|Participant_11|2020-01-21 16:49:26.314026|Participant_11|2020-01-21 16:50:23.262724|24acb6bf-39c8-46c1-9c51-7177423367ad|False|256|256
+23_EIPH_563476 Turnbull blue.png|2|{"x1": "128","y1": "61","x2": "155","y2": "88",}|Participant_11|2020-01-21 16:49:23.599767|Participant_11|2020-01-21 16:49:24.349624|5de45a42-944d-4e55-b9d4-480fb7e7a060|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|3|{"x1": "169","y1": "164","x2": "196","y2": "191",}|Participant_11|2020-01-21 16:49:18.079807|Participant_11|2020-01-21 16:49:18.079836|395d8a67-6a0e-4db0-8e02-82a3ca399567|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|3|{"x1": "238","y1": "170","x2": "256","y2": "197",}|Participant_11|2020-01-21 16:47:25.506863|Participant_11|2020-01-21 16:49:08.362456|010e5be6-e68b-4555-bd6f-ec7622d7f48e|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|2|{"x1": "84","y1": "81","x2": "112","y2": "104",}|Participant_11|2020-01-21 16:47:16.302997|Participant_11|2020-01-21 16:48:51.184429|1a7f21ac-3dda-4005-b828-6cbb80a843a0|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|2|{"x1": "126","y1": "56","x2": "153","y2": "83",}|Participant_11|2020-01-21 16:47:17.888768|Participant_11|2020-01-21 16:48:42.256879|790e4856-ca99-4541-978f-95563688aa33|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|3|{"x1": "167","y1": "216","x2": "189","y2": "234",}|Participant_11|2020-01-21 16:48:25.027932|Participant_11|2020-01-21 16:48:26.778545|be0443cf-9fe1-4db5-9b4c-bbd58e45fc86|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "79","y1": "124","x2": "106","y2": "151",}|Participant_11|2020-01-21 16:48:22.070608|Participant_11|2020-01-21 16:48:22.070640|2c0e0823-edfd-4051-9dfd-a57db8ac4d4d|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "211","y1": "131","x2": "238","y2": "158",}|Participant_11|2020-01-21 16:48:19.991458|Participant_11|2020-01-21 16:48:19.991484|cc606cb2-0a27-492c-a667-07879480cd76|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "184","y1": "29","x2": "211","y2": "56",}|Participant_11|2020-01-21 16:48:18.930424|Participant_11|2020-01-21 16:48:18.930460|33566827-1044-4c16-9e5f-e72b7e558da1|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "228","y1": "5","x2": "255","y2": "32",}|Participant_11|2020-01-21 16:48:17.926394|Participant_11|2020-01-21 16:48:17.926435|9d3436ad-e517-4881-ba6d-373ec9f4c6db|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "82","y1": "16","x2": "109","y2": "43",}|Participant_11|2020-01-21 16:48:17.229997|Participant_11|2020-01-21 16:48:17.230031|475a57e6-2598-4317-84ee-6deb29a937c8|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "17","y1": "21","x2": "44","y2": "48",}|Participant_11|2020-01-21 16:48:16.486849|Participant_11|2020-01-21 16:48:16.486872|22f7b438-b4db-46a0-a527-47ea3ce1d700|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|0|{"x1": "17","y1": "44","x2": "45","y2": "60",}|Participant_11|2020-01-21 16:48:13.099482|Participant_11|2020-01-21 16:48:15.461005|4218be59-27ba-4bfe-ac2f-902a2dbb9f56|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|4|{"x1": "71","y1": "-5","x2": "98","y2": "22",}|Participant_11|2020-01-21 16:47:45.691760|Participant_11|2020-01-21 16:48:11.638205|7b908897-4efb-423d-affb-a1ed9791e652|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|3|{"x1": "40","y1": "119","x2": "67","y2": "146",}|Participant_11|2020-01-21 16:47:15.413524|Participant_11|2020-01-21 16:47:15.413562|1214c89e-8fa3-49ca-baaf-42954cb8ae83|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|3|{"x1": "40","y1": "225","x2": "67","y2": "252",}|Participant_11|2020-01-21 16:47:11.206055|Participant_11|2020-01-21 16:47:13.134007|7693665e-c328-4606-9a38-207bf1a68774|False|256|256
+23_EIPH_563476 Berliner Blau-001.png|4|{"x1": "190","y1": "224","x2": "217","y2": "251",}|Participant_11|2020-01-21 16:47:08.460611|Participant_11|2020-01-21 16:47:09.176165|f6402955-b97f-4ea9-a20a-bb60c909e8b9|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|0|{"x1": "15","y1": "2","x2": "42","y2": "29",}|Participant_11|2020-01-21 16:47:03.330640|Participant_11|2020-01-21 16:47:03.330666|2da38fce-aa69-4b63-aa1a-c66043117fc4|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|0|{"x1": "183","y1": "82","x2": "210","y2": "109",}|Participant_11|2020-01-21 16:46:57.231972|Participant_11|2020-01-21 16:46:57.231997|ff225312-6835-4ad4-b241-f0a4e1f17791|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|0|{"x1": "185","y1": "-2","x2": "212","y2": "25",}|Participant_11|2020-01-21 16:46:55.248193|Participant_11|2020-01-21 16:46:55.966750|1fbc967e-ea16-46c0-9d4b-bd2a7da3857c|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|1|{"x1": "24","y1": "101","x2": "64","y2": "144",}|Participant_11|2020-01-21 16:46:53.840774|Participant_11|2020-01-21 16:46:53.840801|91d4944c-daea-46a2-95e8-c3ba13e9eab1|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|1|{"x1": "128","y1": "64","x2": "156","y2": "92",}|Participant_11|2020-01-21 16:46:47.056066|Participant_11|2020-01-21 16:46:47.056100|23a37a17-812d-43d2-8aaf-ee9499d96e98|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|1|{"x1": "129","y1": "101","x2": "156","y2": "128",}|Participant_11|2020-01-21 16:46:43.563870|Participant_11|2020-01-21 16:46:43.563904|03508ba7-0954-4f2e-9447-ad57312f8804|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|1|{"x1": "165","y1": "167","x2": "192","y2": "194",}|Participant_11|2020-01-21 16:46:43.112388|Participant_11|2020-01-21 16:46:43.112411|1340888f-85e0-4439-a490-9e4e7637df9b|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|1|{"x1": "10","y1": "227","x2": "37","y2": "254",}|Participant_11|2020-01-21 16:46:41.048730|Participant_11|2020-01-21 16:46:42.093718|ff80da7b-0d81-4ec0-84c8-578ba5962c30|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|0|{"x1": "73","y1": "211","x2": "100","y2": "238",}|Participant_11|2020-01-21 16:46:19.404892|Participant_11|2020-01-21 16:46:19.404929|67b93322-3d6e-4aae-be27-ce6bfcda3d92|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|0|{"x1": "49","y1": "185","x2": "76","y2": "212",}|Participant_11|2020-01-21 16:45:59.978822|Participant_11|2020-01-21 16:46:00.578017|fdfe6036-9ff4-47a8-a5e9-0bfefe31eb56|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|2|{"x1": "19","y1": "89","x2": "38","y2": "113",}|Participant_11|2020-01-21 16:45:58.273331|Participant_11|2020-01-21 16:45:58.273356|7941607a-f035-4933-8733-d1726395ad3b|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|2|{"x1": "40","y1": "84","x2": "67","y2": "111",}|Participant_11|2020-01-21 16:45:54.172441|Participant_11|2020-01-21 16:45:54.172476|2be07c78-0aff-4a6f-8b0a-94fef0a2c302|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|2|{"x1": "68","y1": "90","x2": "95","y2": "117",}|Participant_11|2020-01-21 16:45:53.332505|Participant_11|2020-01-21 16:45:53.332550|fc93e7cc-635c-4356-8116-6a861410b814|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|2|{"x1": "145","y1": "18","x2": "172","y2": "45",}|Participant_11|2020-01-21 16:45:51.239939|Participant_11|2020-01-21 16:45:52.484781|448f39b7-15f4-4cd3-8205-506227e9bc2e|False|256|256
+19_EIPH_566933 L Tunrbull blue.png|4|{"x1": "130","y1": "131","x2": "159","y2": "161",}|Participant_11|2020-01-21 16:45:45.995890|Participant_11|2020-01-21 16:45:50.248685|f4233886-9e0e-4aeb-ae73-0f6515e21d0b|False|256|256
+19_EIPH_566933 L Berliner Blau.png|2|{"x1": "7","y1": "207","x2": "40","y2": "237",}|Participant_11|2020-01-21 16:45:39.424443|Participant_11|2020-01-21 16:45:39.424469|24beeef4-7fce-4fc3-92b3-f934c7d5d553|False|256|256
+19_EIPH_566933 L Berliner Blau.png|2|{"x1": "133","y1": "130","x2": "163","y2": "167",}|Participant_11|2020-01-21 16:45:32.544609|Participant_11|2020-01-21 16:45:33.356388|8e023c70-3d86-426d-b72f-6aed7804bb44|False|256|256
+19_EIPH_566933 L Berliner Blau.png|1|{"x1": "153","y1": "118","x2": "187","y2": "155",}|Participant_11|2020-01-21 16:45:29.880061|Participant_11|2020-01-21 16:45:29.880088|7a90b036-c73d-43b9-a66a-e036cd23855d|False|256|256
+19_EIPH_566933 L Berliner Blau.png|1|{"x1": "227","y1": "126","x2": "255","y2": "154",}|Participant_11|2020-01-21 16:45:25.586231|Participant_11|2020-01-21 16:45:25.586264|da42ba18-ceaa-4635-81af-6790cb16fbb8|False|256|256
+19_EIPH_566933 L Berliner Blau.png|1|{"x1": "187","y1": "167","x2": "230","y2": "209",}|Participant_11|2020-01-21 16:45:16.223313|Participant_11|2020-01-21 16:45:19.494266|44af846b-4f71-448f-b7d0-e2c3b2989e8c|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "-1","y1": "28","x2": "26","y2": "55",}|Participant_11|2020-01-21 16:45:05.233010|Participant_11|2020-01-21 16:45:05.233045|ee4b0359-f265-4de2-95ed-7c5d30230ae0|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "17","y1": "19","x2": "44","y2": "46",}|Participant_11|2020-01-21 16:45:04.221312|Participant_11|2020-01-21 16:45:04.221338|9ff0b91a-e779-4462-96a8-28a4866035d5|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "105","y1": "88","x2": "132","y2": "115",}|Participant_11|2020-01-21 16:45:03.553802|Participant_11|2020-01-21 16:45:03.553840|5ea91652-5cd9-4f81-80cd-52c7a7ca4ae3|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "119","y1": "118","x2": "146","y2": "145",}|Participant_11|2020-01-21 16:45:02.883257|Participant_11|2020-01-21 16:45:02.883298|81702f78-d606-47cf-8dbd-954b611c2ae9|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "200","y1": "214","x2": "230","y2": "241",}|Participant_11|2020-01-21 16:45:02.432241|Participant_11|2020-01-21 16:45:15.157782|90696a1c-f166-46df-ab4c-91e6d2b0cff2|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "119","y1": "220","x2": "146","y2": "247",}|Participant_11|2020-01-21 16:45:01.589531|Participant_11|2020-01-21 16:45:01.589564|25931dd1-4405-45c3-8ba0-576bc5a05cf3|False|256|256
+19_EIPH_566933 L Berliner Blau.png|0|{"x1": "40","y1": "183","x2": "67","y2": "210",}|Participant_11|2020-01-21 16:45:00.828573|Participant_11|2020-01-21 16:45:00.828597|f09f56e0-fe12-4450-b974-b6dc622cd96f|False|256|256
+17_EIPH_575796 Turnbull blue.png|0|{"x1": "215","y1": "225","x2": "242","y2": "252",}|Participant_11|2020-01-21 16:44:55.816073|Participant_11|2020-01-21 16:44:55.816098|43c8e81e-4439-4dcf-8939-236b152a9509|False|256|256
+17_EIPH_575796 Turnbull blue.png|0|{"x1": "165","y1": "69","x2": "192","y2": "96",}|Participant_11|2020-01-21 16:44:34.631947|Participant_11|2020-01-21 16:44:38.544794|43edfdb3-77ef-4ab8-b061-2459a198913f|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "194","y1": "-10","x2": "221","y2": "17",}|Participant_11|2020-01-21 16:44:20.103733|Participant_11|2020-01-21 16:44:30.665885|6b4a5240-981e-49ce-a955-7611ae88bec3|True|256|256
+17_EIPH_575796 Turnbull blue.png|1|{"x1": "187","y1": "10","x2": "214","y2": "37",}|Participant_11|2020-01-21 16:44:17.277596|Participant_11|2020-01-21 16:44:18.238620|0110f400-599b-427f-bfb1-0fdbbad4d219|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "81","y1": "11","x2": "108","y2": "38",}|Participant_11|2020-01-21 16:44:15.310897|Participant_11|2020-01-21 16:44:16.226826|5b89be0e-be9b-4d0c-a72f-b3d034bb5b76|False|256|256
+17_EIPH_575796 Turnbull blue.png|0|{"x1": "224","y1": "20","x2": "251","y2": "47",}|Participant_11|2020-01-21 16:44:06.830226|Participant_11|2020-01-21 16:44:06.830262|e57898ef-59da-486a-8f5b-6dc9ecb11ea4|False|256|256
+17_EIPH_575796 Turnbull blue.png|0|{"x1": "42","y1": "159","x2": "69","y2": "186",}|Participant_11|2020-01-21 16:43:58.731020|Participant_11|2020-01-21 16:43:58.731061|2ce645f0-f733-4698-8db2-a62508d97cec|False|256|256
+17_EIPH_575796 Turnbull blue.png|0|{"x1": "101","y1": "139","x2": "126","y2": "163",}|Participant_11|2020-01-21 16:43:50.672499|Participant_11|2020-01-21 16:43:55.045964|3efa4d89-44d9-47d0-91a6-59b677c47fe6|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "103","y1": "46","x2": "130","y2": "73",}|Participant_11|2020-01-21 16:43:49.042308|Participant_11|2020-01-21 16:43:49.042336|fee97b97-f4b5-4d1f-8179-4c99cb2bace1|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "94","y1": "105","x2": "121","y2": "132",}|Participant_11|2020-01-21 16:43:46.522455|Participant_11|2020-01-21 16:43:46.522481|5f0ccab4-ec82-4990-8618-3fe771a03c36|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "165","y1": "195","x2": "192","y2": "222",}|Participant_11|2020-01-21 16:43:45.733033|Participant_11|2020-01-21 16:43:45.733062|03d41128-c7aa-4aa0-886c-cde2609757d1|False|256|256
+17_EIPH_575796 Turnbull blue.png|2|{"x1": "83","y1": "147","x2": "110","y2": "174",}|Participant_11|2020-01-21 16:43:42.420485|Participant_11|2020-01-21 16:43:43.224870|bc0d8656-3af4-4042-b6fa-fd14c794235e|False|256|256
+17_EIPH_575796 Turnbull blue.png|3|{"x1": "60","y1": "103","x2": "87","y2": "130",}|Participant_11|2020-01-21 16:43:40.484725|Participant_11|2020-01-21 16:43:41.357964|b827edfe-bb3c-4b57-a642-68d48952abc6|False|256|256
+17_EIPH_575796 Turnbull blue.png|4|{"x1": "134","y1": "130","x2": "174","y2": "176",}|Participant_11|2020-01-21 16:43:37.836807|Participant_11|2020-01-21 16:43:39.387984|2b1ce5fd-03da-4377-882c-828ff1cde93b|False|256|256
+15_EIPH_568320 Turnbull blue.png|1|{"x1": "10","y1": "9","x2": "37","y2": "36",}|Participant_11|2020-01-21 16:43:05.862623|Participant_11|2020-01-21 16:43:31.065805|9da29a45-fac0-478a-ba01-1288ada586c4|False|256|256
+15_EIPH_568320 Turnbull blue.png|2|{"x1": "57","y1": "46","x2": "78","y2": "67",}|Participant_11|2020-01-21 16:42:40.390439|Participant_11|2020-01-21 16:43:02.352288|37403bfd-e2be-411b-bd5c-2e1e6be57221|False|256|256
+15_EIPH_568320 Turnbull blue.png|3|{"x1": "122","y1": "123","x2": "174","y2": "181",}|Participant_11|2020-01-21 16:42:49.894963|Participant_11|2020-01-21 16:42:50.746294|7d5ed1f4-4101-4a8c-9130-53cf78ce60d4|False|256|256
+15_EIPH_568320 Turnbull blue.png|1|{"x1": "70","y1": "46","x2": "97","y2": "73",}|Participant_11|2020-01-21 16:42:45.474833|Participant_11|2020-01-21 16:42:45.474858|f4ed2fb7-7b08-4f42-935b-31a580d0f698|False|256|256
+15_EIPH_568320 Turnbull blue.png|0|{"x1": "40","y1": "37","x2": "63","y2": "59",}|Participant_11|2020-01-21 16:42:35.883580|Participant_11|2020-01-21 16:42:35.883618|10be09e1-8fae-4992-b2ea-46a976a32ce0|False|256|256
+15_EIPH_568320 Turnbull blue.png|0|{"x1": "66","y1": "69","x2": "93","y2": "96",}|Participant_11|2020-01-21 16:42:30.593377|Participant_11|2020-01-21 16:42:30.593400|b7606723-a1eb-4bc7-8e87-5a6cb85b1703|False|256|256
+15_EIPH_568320 Turnbull blue.png|0|{"x1": "41","y1": "86","x2": "65","y2": "112",}|Participant_11|2020-01-21 16:42:28.906981|Participant_11|2020-01-21 16:42:31.958733|661e27d9-c7ac-4dd2-83e9-d21db33aa0cd|False|256|256
+15_EIPH_568320 Turnbull blue.png|0|{"x1": "17","y1": "154","x2": "44","y2": "181",}|Participant_11|2020-01-21 16:42:26.354103|Participant_11|2020-01-21 16:42:27.715366|a60af5a1-e97f-4c2a-b4b3-43cd1360d21b|False|256|256
+15_EIPH_568320 Turnbull blue.png|1|{"x1": "35","y1": "183","x2": "60","y2": "206",}|Participant_11|2020-01-21 16:42:24.862422|Participant_11|2020-01-21 16:42:24.862456|296e8222-8137-4e16-920b-93fcdaad8c06|False|256|256
+15_EIPH_568320 Turnbull blue.png|1|{"x1": "179","y1": "195","x2": "204","y2": "216",}|Participant_11|2020-01-21 16:42:18.580427|Participant_11|2020-01-21 16:42:20.139969|46cae0e7-2b80-4d1c-85a7-944fcb584da6|False|256|256
+15_EIPH_568320 Turnbull blue.png|2|{"x1": "166","y1": "218","x2": "193","y2": "245",}|Participant_11|2020-01-21 16:42:15.151445|Participant_11|2020-01-21 16:42:15.685867|d72128cd-cae4-4860-962c-b1706683769c|False|256|256
+15_EIPH_568320 Turnbull blue.png|3|{"x1": "157","y1": "154","x2": "179","y2": "176",}|Participant_11|2020-01-21 16:42:11.336829|Participant_11|2020-01-21 16:42:11.336859|b8643842-5969-425e-a089-e7c43c2e21f2|False|256|256
+15_EIPH_568320 Turnbull blue.png|3|{"x1": "172","y1": "131","x2": "194","y2": "153",}|Participant_11|2020-01-21 16:42:08.258203|Participant_11|2020-01-21 16:42:13.427512|34228b77-2bd8-41c9-ab26-26a5ef359cec|False|256|256
+15_EIPH_568320 Turnbull blue.png|3|{"x1": "102","y1": "120","x2": "122","y2": "142",}|Participant_11|2020-01-21 16:42:07.331763|Participant_11|2020-01-21 16:42:07.331797|b3d7f847-ca63-4940-939c-7f6331c3a053|False|256|256
+15_EIPH_568320 Turnbull blue.png|3|{"x1": "89","y1": "49","x2": "110","y2": "66",}|Participant_11|2020-01-21 16:42:02.598450|Participant_11|2020-01-21 16:42:03.441292|f35417a5-b513-46ad-af04-6ef7abfc27f0|False|256|256
+15_EIPH_568320 berliner blau.png|4|{"x1": "131","y1": "131","x2": "175","y2": "163",}|Participant_11|2020-01-21 16:09:48.302954|Participant_11|2020-01-21 16:09:54.832394|bb9836fa-c788-4594-a700-fba2663d68d6|False|256|256
+15_EIPH_568320 berliner blau.png|3|{"x1": "225","y1": "157","x2": "252","y2": "184",}|Participant_11|2020-01-21 16:09:46.950146|Participant_11|2020-01-21 16:09:46.950173|2b918731-3ede-4a6b-91fe-42d392e39958|False|256|256
+15_EIPH_568320 berliner blau.png|3|{"x1": "155","y1": "82","x2": "182","y2": "109",}|Participant_11|2020-01-21 16:09:46.306161|Participant_11|2020-01-21 16:09:46.306185|70a809d2-8e30-4032-bb16-1bd694671f48|False|256|256
+15_EIPH_568320 berliner blau.png|3|{"x1": "18","y1": "82","x2": "45","y2": "109",}|Participant_11|2020-01-21 16:09:44.130329|Participant_11|2020-01-21 16:09:45.101159|7a848a41-4cfb-4dd8-bb92-345857ad27c6|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "157","y1": "185","x2": "176","y2": "205",}|Participant_11|2020-01-21 16:09:43.167930|Participant_11|2020-01-21 16:09:43.167957|79013f91-d2b8-44a4-ae50-75532ef199c4|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "114","y1": "162","x2": "138","y2": "183",}|Participant_11|2020-01-21 16:09:28.426964|Participant_11|2020-01-21 16:09:28.426998|bea2390f-932e-47f8-858e-e334b995caa5|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "9","y1": "114","x2": "31","y2": "133",}|Participant_11|2020-01-21 16:09:25.349767|Participant_11|2020-01-21 16:09:25.349791|9ce09dbb-077e-4c1c-9e06-18076a8fe000|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "100","y1": "108","x2": "121","y2": "126",}|Participant_11|2020-01-21 16:09:21.896000|Participant_11|2020-01-21 16:09:21.896034|4de41326-096a-4d4f-ae78-12bf91037ebe|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "81","y1": "38","x2": "98","y2": "61",}|Participant_11|2020-01-21 16:09:19.115664|Participant_11|2020-01-21 16:09:19.115699|e84c07fb-c35d-4bf3-a8d9-ac2d01a471e3|False|256|256
+15_EIPH_568320 berliner blau.png|0|{"x1": "90","y1": "3","x2": "112","y2": "23",}|Participant_11|2020-01-21 16:09:13.999645|Participant_11|2020-01-21 16:09:16.251985|6157096e-511b-486c-a0ff-d93fc1a42f11|False|256|256
+14_EIPH_568381 berliner blau-001.png|1|{"x1": "102","y1": "228","x2": "129","y2": "255",}|Participant_11|2020-01-21 16:08:51.956170|Participant_11|2020-01-21 16:09:02.681031|57ef77b7-38b5-4b29-be86-25cd6aab7f72|False|256|256
+14_EIPH_568381 berliner blau-001.png|3|{"x1": "90","y1": "108","x2": "112","y2": "129",}|Participant_11|2020-01-21 16:08:48.388423|Participant_11|2020-01-21 16:08:50.863323|bf445ef2-fa07-4235-a07d-885f083a25c0|False|256|256
+14_EIPH_568381 berliner blau-001.png|2|{"x1": "20","y1": "43","x2": "39","y2": "62",}|Participant_11|2020-01-21 16:08:39.056643|Participant_11|2020-01-21 16:08:41.910290|70c4f5c5-9f7a-48d2-98a9-706b3468d9c1|False|256|256
+14_EIPH_568381 berliner blau-001.png|3|{"x1": "19","y1": "25","x2": "46","y2": "52",}|Participant_11|2020-01-21 16:08:37.340393|Participant_11|2020-01-21 16:08:38.117244|1c1994ac-b5b2-4e59-b278-69accb0397df|False|256|256
+14_EIPH_568381 berliner blau-001.png|4|{"x1": "17","y1": "3","x2": "44","y2": "30",}|Participant_11|2020-01-21 16:08:36.484822|Participant_11|2020-01-21 16:08:36.484858|880595d7-70b7-4742-9c59-776d7f0c819e|False|256|256
+14_EIPH_568381 berliner blau-001.png|4|{"x1": "108","y1": "6","x2": "135","y2": "33",}|Participant_11|2020-01-21 16:08:33.900758|Participant_11|2020-01-21 16:08:33.900831|3749386d-e25d-4add-8bc4-2389ace1407f|False|256|256
+14_EIPH_568381 berliner blau-001.png|4|{"x1": "128","y1": "128","x2": "155","y2": "155",}|Participant_11|2020-01-21 16:08:22.072378|Participant_11|2020-01-21 16:08:26.017699|15cbb81b-dcf3-4077-ad00-5eaaeaf51958|False|256|256
+14_EIPH_568381 berliner blau-001.png|2|{"x1": "74","y1": "189","x2": "101","y2": "216",}|Participant_11|2020-01-21 16:08:13.536435|Participant_11|2020-01-21 16:08:17.343454|899d47f5-d189-4f6d-8db7-cdd94622ff16|False|256|256
+13_EIPH_570370 Berliner Blau.png|0|{"x1": "166","y1": "0","x2": "190","y2": "18",}|Participant_11|2020-01-21 16:07:53.771088|Participant_11|2020-01-21 16:08:01.418018|80861d1c-45fa-4368-9fee-3e403de80eba|False|256|256
+13_EIPH_570370 Berliner Blau.png|2|{"x1": "185","y1": "5","x2": "208","y2": "24",}|Participant_11|2020-01-21 16:07:51.398944|Participant_11|2020-01-21 16:07:52.394421|c369c338-920d-43de-95b3-058e7500cbb4|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "9","y1": "11","x2": "36","y2": "38",}|Participant_11|2020-01-21 16:07:47.198739|Participant_11|2020-01-21 16:07:49.001030|94683f5d-d4a3-4697-aa96-a5f4a8b7e0b5|False|256|256
+13_EIPH_570370 Berliner Blau.png|2|{"x1": "70","y1": "120","x2": "97","y2": "147",}|Participant_11|2020-01-21 16:07:15.815311|Participant_11|2020-01-21 16:07:38.857633|9aa558ad-0f5f-4c23-9dd0-5775f074304c|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "157","y1": "165","x2": "184","y2": "192",}|Participant_11|2020-01-21 16:07:15.528742|Participant_11|2020-01-21 16:07:15.528777|8df55de7-7b4c-4ee1-bbb1-3318d9e0f512|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "106","y1": "212","x2": "133","y2": "239",}|Participant_11|2020-01-21 16:07:13.834837|Participant_11|2020-01-21 16:07:13.834868|3e5dfd7f-4bfb-451a-8af1-68734f2a95b3|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "15","y1": "106","x2": "39","y2": "130",}|Participant_11|2020-01-21 16:07:12.576807|Participant_11|2020-01-21 16:07:12.576836|796e33c1-c6cc-40fe-81fe-7deb6458aa90|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "148","y1": "48","x2": "171","y2": "70",}|Participant_11|2020-01-21 16:07:04.251336|Participant_11|2020-01-21 16:07:04.251362|268f67f3-d756-4dc6-aea1-4bf85d1e833d|False|256|256
+13_EIPH_570370 Berliner Blau.png|1|{"x1": "191","y1": "105","x2": "218","y2": "132",}|Participant_11|2020-01-21 16:06:54.864205|Participant_11|2020-01-21 16:06:55.851049|b21a2220-b561-4710-8434-f658122ee695|False|256|256
+13_EIPH_570370 Berliner Blau.png|0|{"x1": "158","y1": "77","x2": "182","y2": "102",}|Participant_11|2020-01-21 16:06:53.302307|Participant_11|2020-01-21 16:06:53.302335|cfd1229d-5ac8-4399-92fa-e5cbc98df322|False|256|256
+13_EIPH_570370 Berliner Blau.png|0|{"x1": "53","y1": "227","x2": "80","y2": "254",}|Participant_11|2020-01-21 16:06:49.262356|Participant_11|2020-01-21 16:06:49.262393|60bd2cb3-831c-4a98-b1c2-5c47588b69f9|False|256|256
+13_EIPH_570370 Berliner Blau.png|0|{"x1": "147","y1": "233","x2": "174","y2": "256",}|Participant_11|2020-01-21 16:06:44.010148|Participant_11|2020-01-21 16:06:44.010183|8adee7ca-bdf2-4245-9c49-90ce8eaaff99|False|256|256
+13_EIPH_570370 Berliner Blau.png|0|{"x1": "163","y1": "33","x2": "185","y2": "55",}|Participant_11|2020-01-21 16:06:31.646745|Participant_11|2020-01-21 16:06:39.606581|9e3d0ab7-381b-4b00-8ae7-30428b34ccbf|False|256|256
+08_EIPH_574999 Berliner Blau.png|4|{"x1": "131","y1": "129","x2": "152","y2": "151",}|Participant_11|2020-01-21 16:06:27.883231|Participant_11|2020-01-21 16:06:27.883259|6d072803-ab3c-4071-8dd3-2a184aae4ead|False|256|256
+08_EIPH_574999 Berliner Blau.png|4|{"x1": "151","y1": "83","x2": "186","y2": "115",}|Participant_11|2020-01-21 16:05:50.782793|Participant_11|2020-01-21 16:05:54.750605|88f300f1-afb9-4dc2-9c64-30b231c4189e|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "120","y1": "109","x2": "147","y2": "136",}|Participant_11|2020-01-21 16:05:47.969099|Participant_11|2020-01-21 16:05:47.969126|f682f509-6628-439c-8e2f-2042e61fbcb1|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "153","y1": "123","x2": "188","y2": "153",}|Participant_11|2020-01-21 16:05:40.821989|Participant_11|2020-01-21 16:05:40.822014|b2a20e7a-5015-432c-a01e-d063f1cdd34c|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "174","y1": "141","x2": "201","y2": "168",}|Participant_11|2020-01-21 16:05:34.508804|Participant_11|2020-01-21 16:05:34.508840|7d7a10e7-45f2-466c-9db6-7ce88ca041bc|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "150","y1": "155","x2": "177","y2": "182",}|Participant_11|2020-01-21 16:05:32.864851|Participant_11|2020-01-21 16:05:32.864882|417b2cae-c05a-4fa3-a682-57a17a561b08|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "180","y1": "158","x2": "207","y2": "185",}|Participant_11|2020-01-21 16:05:32.090115|Participant_11|2020-01-21 16:05:32.090146|8a917fd1-6367-4dad-a973-f3176a4dac22|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "207","y1": "77","x2": "240","y2": "112",}|Participant_11|2020-01-21 16:05:30.692348|Participant_11|2020-01-21 16:05:30.692381|d0666265-277e-45ee-9d5f-fb83674c8d02|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "94","y1": "90","x2": "126","y2": "119",}|Participant_11|2020-01-21 16:05:27.535987|Participant_11|2020-01-21 16:05:27.536012|27c6bb5f-f708-416e-ad9b-5b1c745c5c6d|False|256|256
+08_EIPH_574999 Berliner Blau.png|3|{"x1": "92","y1": "59","x2": "128","y2": "91",}|Participant_11|2020-01-21 16:05:17.683659|Participant_11|2020-01-21 16:05:24.221564|eaf8ff62-b1df-4686-8a43-a1757be4c4f8|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "118","y1": "147","x2": "145","y2": "174",}|Participant_11|2020-01-21 16:41:30.171585|Participant_11|2020-01-21 16:41:32.345872|d6b23556-606e-4800-b841-4e70e921b3ed|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|1|{"x1": "174","y1": "128","x2": "201","y2": "155",}|Participant_11|2020-01-21 16:41:24.949428|Participant_11|2020-01-21 16:41:28.984808|d12d1926-b3be-4068-be76-7ea4656bbd26|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "107","y1": "36","x2": "134","y2": "63",}|Participant_11|2020-01-21 16:41:24.099054|Participant_11|2020-01-21 16:41:42.257599|485e0057-2e5f-4fd8-910d-78a27f6c1a28|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "165","y1": "52","x2": "192","y2": "79",}|Participant_11|2020-01-21 16:41:23.315341|Participant_11|2020-01-21 16:41:23.315375|2d9726c8-b6b7-4825-9291-49395c4e4b98|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "190","y1": "156","x2": "217","y2": "183",}|Participant_11|2020-01-21 16:41:21.841318|Participant_11|2020-01-21 16:41:21.841345|efaf985f-1262-4455-a173-8094742fc7f7|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "123","y1": "218","x2": "150","y2": "245",}|Participant_11|2020-01-21 16:41:20.653981|Participant_11|2020-01-21 16:41:20.654007|6d7910d3-ba07-4fe7-a7cf-afdd6c7c3564|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|0|{"x1": "52","y1": "218","x2": "79","y2": "245",}|Participant_11|2020-01-21 16:41:18.783489|Participant_11|2020-01-21 16:41:19.810495|1d59ab89-3f90-4c26-b392-d003140d29ba|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|1|{"x1": "48","y1": "145","x2": "72","y2": "168",}|Participant_11|2020-01-21 16:41:15.208028|Participant_11|2020-01-21 16:41:17.452341|1298a5da-6fb1-41a7-ac9b-466539160c64|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|2|{"x1": "148","y1": "193","x2": "168","y2": "217",}|Participant_11|2020-01-21 16:41:11.542175|Participant_11|2020-01-21 16:41:14.415525|fdc9713c-2181-4a4c-9685-4b3a1ef79934|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|3|{"x1": "131","y1": "124","x2": "158","y2": "151",}|Participant_11|2020-01-21 16:41:03.979478|Participant_11|2020-01-21 16:41:10.548869|cb460ee2-6a9c-4e53-affd-b76e5cce6c7a|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|3|{"x1": "100","y1": "210","x2": "131","y2": "237",}|Participant_11|2020-01-21 16:41:07.951145|Participant_11|2020-01-21 16:41:09.156035|614d2164-4b0c-4e63-8ad4-17d23849bc87|False|256|256
+04_EIPH_567017 Turnbull blue-001.png|4|{"x1": "122","y1": "24","x2": "149","y2": "51",}|Participant_11|2020-01-21 16:41:00.808382|Participant_11|2020-01-21 16:41:01.808304|0cafe437-d274-4102-bdda-367aae81e2b8|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|2|{"x1": "0","y1": "4","x2": "20","y2": "25",}|Participant_11|2020-01-21 16:40:37.752360|Participant_11|2020-01-21 16:40:49.124506|225a3868-8a5a-4327-b886-c4739aff896d|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|0|{"x1": "0","y1": "192","x2": "27","y2": "219",}|Participant_11|2020-01-21 16:40:26.751343|Participant_11|2020-01-21 16:40:26.751377|5da8b56e-1ef0-44d5-91a5-a3b94a058e2f|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|0|{"x1": "79","y1": "22","x2": "106","y2": "49",}|Participant_11|2020-01-21 16:40:20.828636|Participant_11|2020-01-21 16:40:23.646655|cc437136-028a-4ab3-9661-8ae5cc82d16b|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|1|{"x1": "57","y1": "13","x2": "82","y2": "36",}|Participant_11|2020-01-21 16:40:16.288606|Participant_11|2020-01-21 16:40:19.691113|1211130a-4aa4-48e9-b6e4-81780ef5900a|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|2|{"x1": "95","y1": "40","x2": "113","y2": "62",}|Participant_11|2020-01-21 16:40:13.472875|Participant_11|2020-01-21 16:40:14.179049|d7325935-702e-48a4-9e40-d12c335069b5|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|0|{"x1": "82","y1": "200","x2": "109","y2": "227",}|Participant_11|2020-01-21 16:40:05.604993|Participant_11|2020-01-21 16:40:05.605019|88176e3f-39b3-4614-b0f8-886be986d0b2|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|0|{"x1": "202","y1": "178","x2": "229","y2": "205",}|Participant_11|2020-01-21 16:40:00.490895|Participant_11|2020-01-21 16:40:00.490933|07b41539-065c-4a17-bba0-28982d7aeb34|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|0|{"x1": "196","y1": "61","x2": "223","y2": "88",}|Participant_11|2020-01-21 16:39:57.988606|Participant_11|2020-01-21 16:39:59.395421|f6648d55-d687-4497-ac7b-9171494aebe1|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|1|{"x1": "226","y1": "106","x2": "253","y2": "133",}|Participant_11|2020-01-21 16:39:53.184359|Participant_11|2020-01-21 16:39:56.990232|268bf570-9797-4b95-8471-3d6a870ebfd1|False|256|256
+02_EIPH_574162 Turnbull blue-001.png|4|{"x1": "123","y1": "128","x2": "177","y2": "177",}|Participant_11|2020-01-21 16:39:49.279843|Participant_11|2020-01-21 16:39:52.129064|0721712f-10b3-4ba1-bab5-648b58a77212|False|256|256
+01_EIPH_563479 Turnbull blue.png|3|{"x1": "111","y1": "114","x2": "144","y2": "155",}|Participant_11|2020-01-21 16:39:38.585674|Participant_11|2020-01-21 16:39:46.414053|a377c06a-eae1-41ba-aa81-0a1359a05b47|False|256|256
+01_EIPH_563479 Turnbull blue.png|0|{"x1": "148","y1": "80","x2": "175","y2": "107",}|Participant_11|2020-01-21 16:39:19.492109|Participant_11|2020-01-21 16:39:24.770672|ae26a714-20ee-46b2-8032-054946cb2b11|False|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "185","y1": "74","x2": "212","y2": "101",}|Participant_11|2020-01-21 16:39:17.603918|Participant_11|2020-01-21 16:39:17.603941|3aa13627-f309-449f-ba49-1f0b5f596dc6|False|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "180","y1": "100","x2": "207","y2": "127",}|Participant_11|2020-01-21 16:39:16.646617|Participant_11|2020-01-21 16:39:16.646663|b6e6a506-c5fe-4022-90d1-2b67befb6f1c|False|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "213","y1": "229","x2": "240","y2": "256",}|Participant_11|2020-01-21 16:39:11.946774|Participant_11|2020-01-21 16:39:11.946799|8a2625ab-b937-49b4-9b7e-68efacc39710|False|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "123","y1": "187","x2": "150","y2": "214",}|Participant_11|2020-01-21 16:39:08.920112|Participant_11|2020-01-21 16:39:12.845279|bcb533ec-4a75-42f7-8667-89b57c29ddf7|True|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "152","y1": "172","x2": "179","y2": "199",}|Participant_11|2020-01-21 16:39:07.718171|Participant_11|2020-01-21 16:39:15.817673|f5a42da4-2013-41d4-b1bd-ab3bcd87de39|False|256|256
+01_EIPH_563479 Turnbull blue.png|1|{"x1": "197","y1": "188","x2": "224","y2": "215",}|Participant_11|2020-01-21 16:39:06.236292|Participant_11|2020-01-21 16:39:06.937620|89f8d7e7-a2dd-429d-ae89-775a24488751|False|256|256
+01_EIPH_563479 Turnbull blue.png|2|{"x1": "7","y1": "58","x2": "46","y2": "96",}|Participant_11|2020-01-21 16:38:57.565495|Participant_11|2020-01-21 16:39:05.055087|6db6134b-de0c-4747-b437-d68440203609|False|256|256
+01_EIPH_563479 Turnbull blue.png|3|{"x1": "162","y1": "63","x2": "189","y2": "90",}|Participant_11|2020-01-21 16:38:52.713304|Participant_11|2020-01-21 16:38:53.611116|1216e423-c0f3-4ccc-b8bd-32edd4fdc150|False|256|256
+01_EIPH_563479 Turnbull blue.png|4|{"x1": "131","y1": "133","x2": "165","y2": "166",}|Participant_11|2020-01-21 16:38:51.616908|Participant_11|2020-01-21 16:38:51.616947|27caad65-0d08-4805-92ac-333ebb438139|False|256|256
