@@ -35,11 +35,7 @@ alt="Object Detection" width="240" height="180" border="10" /></a>
 
 For details, please visit the [SREP](SDATA) section of this repository.
 
-<object data="SDATA/Paper/Overview.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="SDATA/Paper/Overview.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="SDATA/Paper/Overview.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![OVerview](SDATA/Paper/Overview.svg)
 
 
 ## [Is Crowd-Algorithm Collaboration an Advanced Alternative to Crowd-Sourcing on Cytology Slides?](https://link.springer.com/chapter/10.1007/978-3-658-29267-6_5)
