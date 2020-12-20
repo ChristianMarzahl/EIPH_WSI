@@ -36,7 +36,7 @@ Exercise-induced pulmonary hemorrhage (EIPH) is a common condition in sport hors
 ## Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset
 
 
-For details, please visit the [SREP](SDATA) section of this repository.
+For details, please visit the [SDATA](SDATA) section of this repository.
 
 ![OVerview](SDATA/Paper/Overview.svg)
 
