@@ -717,11 +717,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="1041.1916"
-     inkscape:cy="-130.13398"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1058.4162"
+     inkscape:cy="46.059612"
      inkscape:document-units="mm"
-     inkscape:current-layer="g841"
+     inkscape:current-layer="g1325"
      inkscape:document-rotation="0"
      showgrid="false"
      fit-margin-top="0"
@@ -741,7 +741,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1294,51 +1294,55 @@
            id="path1327" />
         <text
            transform="matrix(1,0,0,-1,192.64172,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1331"><tspan
              x="0"
              y="0"
-             id="tspan1329">1</tspan></text>
+             id="tspan1329"
+             style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">1</tspan></text>
         <path
            d="m 288.49894,74.76 v -3.5"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path1333" />
         <text
            transform="matrix(1,0,0,-1,281.49894,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1337"><tspan
              x="0"
              y="0"
-             id="tspan1335">2</tspan></text>
+             id="tspan1335"
+             style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">2</tspan></text>
         <path
            d="m 377.35615,74.76 v -3.5"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path1339" />
         <text
            transform="matrix(1,0,0,-1,370.35615,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1343"><tspan
              x="0"
              y="0"
-             id="tspan1341">4</tspan></text>
+             id="tspan1341"
+             style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">4</tspan></text>
         <path
            d="m 466.21336,74.76 v -3.5"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path1345" />
         <text
            transform="matrix(1,0,0,-1,459.21336,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1349"><tspan
              x="0"
              y="0"
-             id="tspan1347">8</tspan></text>
+             id="tspan1347"
+             style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">8</tspan></text>
         <path
            d="m 555.07058,74.76 v -3.5"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path1351" />
         <text
            transform="matrix(1,0,0,-1,541.07058,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1355"><tspan
              x="0 13.992"
              y="0"
@@ -1350,7 +1354,7 @@
            id="path1357" />
         <text
            transform="matrix(1,0,0,-1,629.92779,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1361"><tspan
              x="0 13.992"
              y="0"
@@ -1362,7 +1366,7 @@
            id="path1363" />
         <text
            transform="matrix(1,0,0,-1,718.785,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1367"><tspan
              x="0 13.992"
              y="0"
@@ -1374,7 +1378,7 @@
            id="path1369" />
         <text
            transform="matrix(1,0,0,-1,800.64221,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1373"><tspan
              x="0 13.992 27.983999"
              y="0"
@@ -1386,7 +1390,7 @@
            id="path1375" />
         <text
            transform="matrix(1,0,0,-1,889.49943,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1379"><tspan
              x="0 13.992 27.983999"
              y="0"
@@ -1398,7 +1402,7 @@
            id="path1381" />
         <text
            transform="matrix(1,0,0,-1,978.35664,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1385"><tspan
              x="0 13.992 27.983999"
              y="0"
@@ -1410,7 +1414,7 @@
            id="path1387" />
         <text
            transform="matrix(1,0,0,-1,1060.2139,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1391"><tspan
              x="0 13.992 27.983999 41.976002"
              y="0"
@@ -1422,7 +1426,7 @@
            id="path1393" />
         <text
            transform="matrix(1,0,0,-1,1145.4695,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1397"><tspan
              x="0 13.992 20.988001 42.745998 56.716"
              y="0"
@@ -1434,7 +1438,7 @@
            id="path1399" />
         <text
            transform="matrix(1,0,0,-1,1234.3267,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1403"><tspan
              x="0 13.992 20.988001 42.745998 56.716"
              y="0"
@@ -1446,7 +1450,7 @@
            id="path1405" />
         <text
            transform="matrix(1,0,0,-1,1323.1839,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1409"><tspan
              x="0 13.992 20.988001 42.745998 56.716"
              y="0"
@@ -1458,7 +1462,7 @@
            id="path1411" />
         <text
            transform="matrix(1,0,0,-1,1412.0411,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1415"><tspan
              x="0 13.992 20.988001 42.745998 56.716"
              y="0"
@@ -1470,7 +1474,7 @@
            id="path1417" />
         <text
            transform="matrix(1,0,0,-1,1500.8984,51.04125)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1421"><tspan
              x="0 13.992 20.988001 42.745998 56.716"
              y="0"
@@ -1478,7 +1482,7 @@
              id="tspan1419">5 WSI</tspan></text>
         <text
            transform="matrix(1,0,0,-1,566.04738,25.744375)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1425"><tspan
              x="0 16.455999 30.403999 51.832001 65.802002 79.332001 88.374001 95.370003 108.834 116.578 123.574 137.54401 151.03 159.65401 171.754 185.702 199.23199 210.694 217.69 231.15401 240.196 247.192 259.29199 272.75601 294.18399 308.15399 314.26999 327.79999 336.42401 349.95401 356.95001 378.70801 392.67801 399.168 410.63 417.62601 431.57401 443.03601 456.56601 470.53601 477.53201 485.276 498.73999 507.78201 514.77802 523.40198 532.44397 545.92999 552.04602 565.99402 572.10999 586.05798"
              y="0"
@@ -1493,7 +1497,7 @@
            transform="translate(47.901641,130.86965)">
           <text
              transform="matrix(1,0,0,-1,0,0.35625)"
-             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1433"><tspan
                x="0 13.99707"
                y="0"
@@ -1501,11 +1505,12 @@
                id="tspan1431">10</tspan></text>
           <text
              transform="matrix(1,0,0,-1,28.204687,8.778125)"
-             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1437"><tspan
                x="0"
                y="0"
-               id="tspan1435">1</tspan></text>
+               id="tspan1435"
+               style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">1</tspan></text>
         </g>
         <path
            d="m 93.901641,249.66578 h -3.5"
@@ -1516,7 +1521,7 @@
            transform="translate(47.901641,241.3064)">
           <text
              transform="matrix(1,0,0,-1,0,0.1484375)"
-             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1445"><tspan
                x="0 13.99707"
                y="0"
@@ -1524,11 +1529,12 @@
                id="tspan1443">10</tspan></text>
           <text
              transform="matrix(1,0,0,-1,28.204687,8.5703125)"
-             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1449"><tspan
                x="0"
                y="0"
-               id="tspan1447">2</tspan></text>
+               id="tspan1447"
+               style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">2</tspan></text>
         </g>
         <path
            d="m 93.901641,360.10254 h -3.5"
@@ -1539,7 +1545,7 @@
            transform="translate(47.901641,351.74316)">
           <text
              transform="matrix(1,0,0,-1,0,0.1484375)"
-             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1457"><tspan
                x="0 13.99707"
                y="0"
@@ -1547,11 +1553,12 @@
                id="tspan1455">10</tspan></text>
           <text
              transform="matrix(1,0,0,-1,28.204687,8.5703125)"
-             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1461"><tspan
                x="0"
                y="0"
-               id="tspan1459">3</tspan></text>
+               id="tspan1459"
+               style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">3</tspan></text>
         </g>
         <path
            d="m 93.901641,470.53929 h -3.5"
@@ -1562,7 +1569,7 @@
            transform="translate(47.901641,462.17992)">
           <text
              transform="matrix(1,0,0,-1,0,0.35625)"
-             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1469"><tspan
                x="0 13.99707"
                y="0"
@@ -1570,11 +1577,12 @@
                id="tspan1467">10</tspan></text>
           <text
              transform="matrix(1,0,0,-1,28.204687,8.778125)"
-             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             style="font-variant:normal;font-weight:normal;font-size:15.4px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
              id="text1473"><tspan
                x="0"
                y="0"
-               id="tspan1471">4</tspan></text>
+               id="tspan1471"
+               style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">4</tspan></text>
         </g>
         <path
            d="m 93.901641,81.483989 h -2"
@@ -1710,7 +1718,7 @@
            id="path1539" />
         <text
            transform="matrix(0,1,1,0,39.323516,234.44531)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1543"><tspan
              x="0 15.048 28.996 42.944 56.408001 65.031998 78.517998 87.141998 93.258003 106.722 120.67"
              y="0"
@@ -2029,7 +2037,7 @@
            id="path1939" />
         <text
            transform="matrix(1,0,0,-1,122.89568,309.12925)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1943"><tspan
              x="0 15.048 28.996 42.944 56.408001 65.031998 78.517998 87.141998 93.258003 106.722 120.67"
              y="0"
@@ -2041,7 +2049,7 @@
            id="path1945" />
         <text
            transform="matrix(1,0,0,-1,180.07849,276.83237)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1949"><tspan
              sodipodi:role="line"
              id="tspan1947"
@@ -2053,7 +2061,7 @@
            id="path1951" />
         <text
            transform="matrix(1,0,0,-1,180.07849,244.5355)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1955"><tspan
              x="0 13.904 27.874001 41.821999 47.938 61.886002"
              y="0"
@@ -2065,7 +2073,7 @@
            id="path1957" />
         <text
            transform="matrix(1,0,0,-1,180.07849,212.23862)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1961"><tspan
              x="0 16.544001 30.492001 51.919998 65.405998"
              y="0"
@@ -2077,7 +2085,7 @@
            id="path1963" />
         <text
            transform="matrix(1,0,0,-1,1645.24,66.400625)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1967"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2089,7 +2097,7 @@
            id="path1969" />
         <text
            transform="matrix(1,0,0,-1,1645.24,156.69662)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1973"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2101,7 +2109,7 @@
            id="path1975" />
         <text
            transform="matrix(1,0,0,-1,1645.24,246.99262)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1979"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2113,7 +2121,7 @@
            id="path1981" />
         <text
            transform="matrix(1,0,0,-1,1645.24,337.28862)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1985"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2125,7 +2133,7 @@
            id="path1987" />
         <text
            transform="matrix(1,0,0,-1,1645.24,427.58463)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1991"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2137,7 +2145,7 @@
            id="path1993" />
         <text
            transform="matrix(1,0,0,-1,1645.24,517.88062)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text1997"><tspan
              x="0 13.992 20.988001"
              y="0"
@@ -2145,7 +2153,7 @@
              id="tspan1995">1.0</tspan></text>
         <text
            transform="matrix(0,1,1,0,1700.9588,130.70312)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2001"><tspan
              x="0 21.427999 34.958 48.444 62.391998 69.388 82.874001 95.898003 109.428 118.47 131.95599 145.92599 159.45599 166.452 180.422 189.464 202.994 215.09399 221.21001 232.672 238.78799 252.252 266.20001 273.19601 281.776 303.20401 318.25201 331.51801"
              y="0"
@@ -2205,7 +2213,7 @@
            id="path2041" />
         <text
            transform="matrix(1,0,0,-1,770.85207,532.24)"
-           style="font-variant:normal;font-weight:normal;font-size:26.4px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:26.4px;font-family:Arial_plus_CE;-inkscape-font-specification:Arial_plus_CE;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2045"><tspan
              x="0 18.0576 34.821602 42.160801 58.344002 68.692802 76.031998 92.188797 108.9264 117.3216 131.076 141.4248 158.1624 174.92641"
              y="0"
@@ -2217,7 +2225,7 @@
            id="path2047" />
         <text
            transform="scale(1,-1)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2051"
            x="115.30164"
            y="-489.72125"><tspan
@@ -2231,7 +2239,7 @@
            id="path2053" />
         <text
            transform="matrix(1,0,0,-1,175.30164,457.42437)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2057"><tspan
              sodipodi:role="line"
              id="tspan2055"
@@ -2243,7 +2251,7 @@
            id="path2059" />
         <text
            transform="matrix(1,0,0,-1,175.30164,425.1275)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2063"><tspan
              x="0 13.904 27.874001 41.821999 47.938 61.886002"
              y="0"
@@ -2255,7 +2263,7 @@
            id="path2065" />
         <text
            transform="matrix(1,0,0,-1,175.30164,392.83062)"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text2069"><tspan
              x="0 16.544001 30.492001 51.919998 65.405998"
              y="0"
