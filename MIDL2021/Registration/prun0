@@ -1,0 +1,26 @@
+         142780 function calls (142624 primitive calls) in 50.907 seconds
+
+   Ordered by: cumulative time
+   List reduced from 340 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   50.907   50.907 {built-in method builtins.exec}
+        1    0.005    0.005   50.907   50.907 <string>:1(<module>)
+      5/1    0.070    0.014   50.902   50.902 registration_tree.py:104(__init__)
+        1    0.000    0.000   50.208   50.208 registration_tree.py:246(divide)
+       10    0.001    0.000   49.355    4.935 registration_tree.py:703(get_region_thumbnail)
+       10    0.000    0.000   46.175    4.618 __init__.py:212(read_region)
+       10   46.025    4.603   46.175    4.618 lowlevel.py:248(read_region)
+       10    0.056    0.006    2.332    0.233 Image.py:2261(thumbnail)
+       10    0.000    0.000    2.276    0.228 Image.py:1838(resize)
+       10    2.276    0.228    2.276    0.228 {method 'resize' of 'ImagingCore' objects}
+        5    0.005    0.001    1.314    0.263 registration_tree.py:643(extract_matching_points_old)
+       10    1.020    0.102    1.020    0.102 {method 'detectAndCompute' of 'cv2.Feature2D' objects}
+       10    0.000    0.000    0.563    0.056 Image.py:1442(paste)
+       10    0.562    0.056    0.562    0.056 {method 'paste' of 'ImagingCore' objects}
+       20    0.000    0.000    0.284    0.014 Image.py:2577(new)
+       20    0.283    0.014    0.283    0.014 {built-in method PIL._imaging.fill}
+    10890    0.061    0.000    0.177    0.000 {built-in method numpy.array}
+        5    0.000    0.000    0.157    0.031 cpd.py:251(registration_cpd)
+        5    0.001    0.000    0.156    0.031 cpd.py:81(registration)
+       10    0.000    0.000    0.150    0.015 lowlevel.py:62(_load_image)
