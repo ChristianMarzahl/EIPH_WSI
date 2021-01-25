@@ -254,15 +254,22 @@ class QuadTree:
         source_w, source_h = self.source_boundary.w / 2, self.source_boundary.h / 2
 
         # transform target bounding box
-        new_xmin, new_ymin = self.tf_param.transform((self.source_boundary.west_edge, self.source_boundary.north_edge))
-        new_xmax, new_ymax = self.tf_param.transform((self.source_boundary.east_edge, self.source_boundary.south_edge))
+        #new_xmin, new_ymin = self.tf_param.transform((self.source_boundary.west_edge, self.source_boundary.north_edge))
+        #new_xmax, new_ymax = self.tf_param.transform((self.source_boundary.east_edge, self.source_boundary.south_edge))
+
+        new_xmin, new_ymin = self.transform_boxes([(self.source_boundary.west_edge, self.source_boundary.north_edge, 50, 50)])[0][:2]
+        new_xmax, new_ymax = self.transform_boxes([(self.source_boundary.east_edge, self.source_boundary.south_edge, 50, 50)])[0][:2]
 
         # set new box coordinates withhin old limits
-        new_ymin, new_xmin = max(new_ymin, self.target_boundary.north_edge), max(new_xmin, self.target_boundary.west_edge)
-        new_ymax, new_xmax = min(new_ymax, self.target_boundary.south_edge), min(new_xmax, self.target_boundary.east_edge)
+        #new_ymin, new_xmin = max(new_ymin, self.target_boundary.north_edge), max(new_xmin, self.target_boundary.west_edge)
+        #new_ymax, new_xmax = min(new_ymax, self.target_boundary.south_edge), min(new_xmax, self.target_boundary.east_edge)
+
+        new_ymin, new_xmin = max(new_ymin, 0), max(new_xmin, 0)
+        new_ymax, new_xmax = min(new_ymax, self.target_slide.dimensions[1]), min(new_xmax, self.target_slide.dimensions[0])
 
         # transform target center
-        target_cx, target_cy = self.tf_param.transform((self.source_boundary.cx, self.source_boundary.cy))
+        #target_cx, target_cy = self.tf_param.transform((self.source_boundary.cx, self.source_boundary.cy))
+        target_cx, target_cy = self.transform_boxes([(self.source_boundary.cx, self.source_boundary.cy, 50, 50)])[0][:2]
 
         # create target boxes
         target_nw = Rect.create(Rect, new_xmin, new_ymin, target_cx - new_xmin, target_cy - new_ymin)

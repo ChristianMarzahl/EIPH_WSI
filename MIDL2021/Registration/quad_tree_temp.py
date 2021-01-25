@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
 
     #for thumbnail_size in [(512, 512), (1024, 1024), (2048, 2048), (4096, 4096), (8192, 8192), (12288, 12288), (16384, 16384)]:
-    for thumbnail_size in [(1024, 1024)]:
+    for target_depth in [0, 1, 2]:
         parameter = {
             # feature extractor parameters
             "point_extractor": "sift",  #orb , sift
@@ -67,9 +67,9 @@ if __name__ == '__main__':
             "homography": True,
             "filter_outliner": False,
             "debug": True,
-            "target_depth": 2,
+            "target_depth": target_depth,
             "run_async": False,
-            "thumbnail_size": thumbnail_size
+            "thumbnail_size": (1024, 1024)
         }
         
 
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
             dist_list.append(distance)
             
-        print(f"Tub: {thumbnail_size} {np.array(dist_list).mean()}")
+        print(f"Tub: {target_depth} {np.array(dist_list).mean()}")
     print("")
 
 
