@@ -69,7 +69,7 @@ if __name__ == '__main__':
             "debug": True,
             "target_depth": target_depth,
             "run_async": False,
-            "thumbnail_size": (1024, 1024)
+            "thumbnail_size": (512, 512)
         }
         
 
