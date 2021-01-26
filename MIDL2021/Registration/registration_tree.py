@@ -14,7 +14,12 @@ import matplotlib.gridspec as gridspec
 import matplotlib.patches as patches
 import itertools
 
+from functools import wraps
+from inspect import currentframe
+
 from sklearn.neighbors import LocalOutlierFactor
+
+import multiprocessing as mp
 
 
 class NodeOrientation(Enum):
@@ -72,6 +77,9 @@ class Rect:
 
         return cls(cx, cy, w, h)
 
+    def is_valid(self):
+        return self.w > 0 and self.h > 0
+
 
     def contains(self, point):
         """Is point (a Point object or (x,y) tuple) inside this Rect?"""
@@ -99,6 +107,7 @@ class Rect:
         ax.plot([x1,x2,x2,x1,x1],[y1,y1,y2,y2,y1], c=c, lw=lw, **kwargs)
 
 
+
 class QuadTree:
     """A class implementing a quadtree."""
 
@@ -116,6 +125,7 @@ class QuadTree:
         depth keeps track of how deep into the quadtree this node lies.
 
         """
+        kwargs.update({"run_async":run_async, "thumbnail_size":thumbnail_size, "homography":homography, "filter_outliner":filter_outliner, "target_depth":target_depth})
         self.kwargs = kwargs
         self.parent = parent
         self.node_orientation = node_orientation
@@ -127,12 +137,18 @@ class QuadTree:
         self.source_slide_name = source_slide._filename
         self.source_boundary = source_boundary
         self._source_slide = source_slide
-        self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
+        
 
         self.target_slide_name = target_slide._filename
         self.target_boundary = target_boundary
         self._target_slide = target_slide       
-        self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
+
+        pool = mp.Pool(2)
+
+        results = pool.starmap(QuadTree.get_region_thumbnail_s, [(source_slide, self.depth+1, source_boundary, thumbnail_size), (target_slide, self.depth+1, target_boundary, thumbnail_size)])
+        pool.close()
+        #self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
+        #self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
 
         self.ptsA, self.ptsB, self.matchedVis = self.extract_matching_points_old(self.source_thumbnail, self.target_thumbnail, source_scale=self.source_scale, target_scale=self.target_scale, **kwargs)
 
@@ -140,11 +156,17 @@ class QuadTree:
             self.ptsA, self.ptsB, self.scale_factors = self.filter_outliner(self.ptsA, self.ptsB)
         
         if homography:
-            homography, mask = cv2.findHomography(self.ptsA, self.ptsB, cv2.RANSAC) 
-            self.tf_param = tf.AffineTransformation(homography[:2, :2], homography[:2, 2:].reshape(-1))
-            self.sigma2, self.q = -1, -1
+            self.mean_reg_error, self.sigma2, self.q, self.tf_param = self._get_min_reg_error_hom(self.ptsA, self.ptsB)
         else:
             self.tf_param, self.sigma2, self.q = cpd.registration_cpd(self.ptsA, self.ptsB, 'affine')
+            self.mean_reg_error = np.linalg.norm(self.tf_param.transform(self.ptsA)-self.ptsB, axis=1).mean()
+
+            mean_reg_error, _, _, tf_param = self._get_min_reg_error_hom(self.ptsA, self.ptsB)
+
+            if self.mean_reg_error > mean_reg_error:
+                self.mean_reg_error = self.mean_reg_error
+                self.tf_param = tf_param
+
 
         self.b = self.tf_param.b
         self.t = self.tf_param.t
@@ -159,6 +181,21 @@ class QuadTree:
         self.nw, self.ne, self.se, self.sw = None, None, None, None
         if depth < target_depth:
             self.divide()
+
+    def _get_min_reg_error_hom(self, ptsA, ptsB):
+        mean_reg_error = 99999999
+
+        tf_param = None
+        for outline_filter in [0, cv2.RANSAC, cv2.RHO, cv2.LMEDS]:
+            homography, mask = cv2.findHomography(self.ptsA, self.ptsB, outline_filter) 
+            temp_tf_param = tf.AffineTransformation(homography[:2, :2], homography[:2, 2:].reshape(-1))
+
+            temp_mean_reg_error = np.linalg.norm(temp_tf_param.transform(ptsA)-ptsB, axis=1).mean()
+            if temp_mean_reg_error < mean_reg_error:
+                mean_reg_error = temp_mean_reg_error
+                sigma2, q, tf_param = -1, -1, temp_tf_param
+
+        return mean_reg_error, sigma2, q, tf_param
 
     @property
     def source_thumbnail(self):
@@ -240,7 +277,7 @@ class QuadTree:
             s +=  f"Target: {self.target_name} \n"
         
         s += f"Source: {self.source_boundary} Target: {self.target_boundary}" + '\n' 
-        s += sp + f'x: [{self.tf_param.b[0][0]:4.3f}, {self.tf_param.b[0][1]:4.3f}, {self.tf_param.t[0]:4.3f}], y: [{self.tf_param.b[1][0]:4.3f}, {self.tf_param.b[1][1]:4.3f}, {self.tf_param.t[1]:4.3f}]] q: {self.q:4.3f}'
+        s += sp + f'x: [{self.tf_param.b[0][0]:4.3f}, {self.tf_param.b[0][1]:4.3f}, {self.tf_param.t[0]:4.3f}], y: [{self.tf_param.b[1][0]:4.3f}, {self.tf_param.b[1][1]:4.3f}, {self.tf_param.t[1]:4.3f}]] error: {self.mean_reg_error:4.3f}'
         if not self.divided:
             return s
         return s + '\n' + '\n'.join([
@@ -254,21 +291,15 @@ class QuadTree:
         source_w, source_h = self.source_boundary.w / 2, self.source_boundary.h / 2
 
         # transform target bounding box
-        #new_xmin, new_ymin = self.tf_param.transform((self.source_boundary.west_edge, self.source_boundary.north_edge))
-        #new_xmax, new_ymax = self.tf_param.transform((self.source_boundary.east_edge, self.source_boundary.south_edge))
 
         new_xmin, new_ymin = self.transform_boxes([(self.source_boundary.west_edge, self.source_boundary.north_edge, 50, 50)])[0][:2]
         new_xmax, new_ymax = self.transform_boxes([(self.source_boundary.east_edge, self.source_boundary.south_edge, 50, 50)])[0][:2]
 
         # set new box coordinates withhin old limits
-        #new_ymin, new_xmin = max(new_ymin, self.target_boundary.north_edge), max(new_xmin, self.target_boundary.west_edge)
-        #new_ymax, new_xmax = min(new_ymax, self.target_boundary.south_edge), min(new_xmax, self.target_boundary.east_edge)
-
         new_ymin, new_xmin = max(new_ymin, 0), max(new_xmin, 0)
         new_ymax, new_xmax = min(new_ymax, self.target_slide.dimensions[1]), min(new_xmax, self.target_slide.dimensions[0])
 
         # transform target center
-        #target_cx, target_cy = self.tf_param.transform((self.source_boundary.cx, self.source_boundary.cy))
         target_cx, target_cy = self.transform_boxes([(self.source_boundary.cx, self.source_boundary.cy, 50, 50)])[0][:2]
 
         # create target boxes
@@ -278,26 +309,46 @@ class QuadTree:
         target_ne = Rect.create(Rect, target_cx, new_ymin,  new_xmax - target_cx, target_cy - new_ymin)
         target_se = Rect.create(Rect, target_cx, target_cy, new_xmax - target_cx, new_ymax - target_cy)
 
+
+        # create target boxes
+        source_nw = Rect(source_cx - source_w/2, source_cy - source_h/2, source_w, source_h)
+        source_sw = Rect(source_cx - source_w/2, source_cy + source_h/2, source_w, source_h)
+
+        source_ne = Rect(source_cx + source_w/2, source_cy - source_h/2, source_w, source_h)
+        source_se = Rect(source_cx + source_w/2, source_cy + source_h/2, source_w, source_h)
+
+
         # The boundaries of the four children nodes are "northwest",
         # "northeast", "southeast" and "southwest" quadrants within the
         # boundary of the current node.
         if self.run_async == False:
-            self.nw = QuadTree(Rect(source_cx - source_w/2, source_cy - source_h/2, source_w, source_h), self.source_slide, 
-                                        target_nw, self.target_slide, 
-                                        depth=self.depth + 1, target_depth=self.target_depth, 
-                                        run_async=self.run_async, node_orientation=NodeOrientation.NORTH_WEST, parent=self, **self.kwargs)
-            self.ne = QuadTree(Rect(source_cx + source_w/2, source_cy - source_h/2, source_w, source_h), self.source_slide,
-                                        target_ne, self.target_slide,
-                                        depth=self.depth + 1, target_depth=self.target_depth,  
-                                        run_async=self.run_async, node_orientation=NodeOrientation.NORTH_EAST, parent=self, **self.kwargs)
-            self.se = QuadTree(Rect(source_cx + source_w/2, source_cy + source_h/2, source_w, source_h), self.source_slide,
-                                        target_se, self.target_slide,
-                                        depth=self.depth + 1, target_depth=self.target_depth,  
-                                        run_async=self.run_async, node_orientation=NodeOrientation.SOUTH_WEST, parent=self, **self.kwargs)
-            self.sw = QuadTree(Rect(source_cx - source_w/2, source_cy + source_h/2, source_w, source_h), self.source_slide,
-                                        target_sw, self.target_slide,
-                                        depth=self.depth + 1, target_depth=self.target_depth, 
-                                        run_async=self.run_async, node_orientation=NodeOrientation.SOUTH_EAST, parent=self, **self.kwargs)
+            try:
+                if source_nw.is_valid() and target_nw.is_valid():
+                    self.nw = QuadTree(source_nw, self.source_slide, target_nw, self.target_slide, depth=self.depth + 1, node_orientation=NodeOrientation.NORTH_WEST, 
+                                                parent=self, **self.kwargs)
+            except Exception as e:
+                self.nw = None
+
+            try:
+                if source_ne.is_valid() and target_ne.is_valid():
+                    self.ne = QuadTree(source_ne, self.source_slide, target_ne, self.target_slide, depth=self.depth + 1, node_orientation=NodeOrientation.NORTH_EAST, 
+                                            parent=self, **self.kwargs)
+            except Exception as e:
+                self.ne = None
+
+            try:
+                if source_se.is_valid() and target_se.is_valid():
+                    self.se = QuadTree(source_se, self.source_slide, target_se, self.target_slide, depth=self.depth + 1, node_orientation=NodeOrientation.SOUTH_WEST, 
+                                            parent=self, **self.kwargs)
+            except Exception as e:
+                self.se = None
+
+            try:
+                if source_sw.is_valid() and target_sw.is_valid():
+                    self.sw = QuadTree(source_sw, self.source_slide, target_sw, self.target_slide, depth=self.depth + 1, node_orientation=NodeOrientation.SOUTH_EAST, 
+                                            parent=self, **self.kwargs)
+            except Exception as e:
+                self.sw = None
         else:
             with Pool(4) as pool:
                 # , self.ne, self.se, self.sw 
@@ -370,13 +421,19 @@ class QuadTree:
 
             size_target_x, size_target_y = int(size * self.mpp_x_scale), int(size * self.mpp_y_scale)
 
+            image_source, image_target, image_target_trans = np.zeros(shape=(1,1)), np.zeros(shape=(1,1)), np.zeros(shape=(1,1))
 
-            image_source = self.source_slide.read_region(location=pA.astype(int) - (size // 2, size // 2), 
-                                                        level=0, size=(size, size))
-            image_target = self.target_slide.read_region(location=pB.astype(int) - (size_target_x // 2, size_target_y // 2), 
-                                                        level=0, size=(size_target_x, size_target_y))
-            image_target_trans = self.target_slide.read_region(location=transformed - (size_target_x // 2, size_target_y // 2), 
-                                                        level=0, size=(size_target_x, size_target_y))
+            pA_location = pA.astype(int) - (size // 2, size // 2)
+            if pA_location[0] > 0 and pA_location[1] > 0 and size > 0:
+                image_source = self.source_slide.read_region(location=pA_location, level=0, size=(size, size))
+
+            pB_location = pB.astype(int) - (size_target_x // 2, size_target_y // 2)
+            if pB_location[0] > 0 and pB_location[1] > 0 and size_target_x > 0 and size_target_y > 0:
+                image_target = self.target_slide.read_region(location=pB_location, level=0, size=(size_target_x, size_target_y))
+
+            trans_location = transformed - (size_target_x // 2, size_target_y // 2)
+            if trans_location[0] > 0 and trans_location[1] > 0 and size_target_x > 0 and size_target_y > 0:
+                image_target_trans = self.target_slide.read_region(location=trans_location, level=0, size=(size_target_x, size_target_y))
 
 
             ax = fig.add_subplot(gs[2, idx])
@@ -392,10 +449,13 @@ class QuadTree:
             ax.imshow(image_target)
         
         if self.divided:
-            return fig, [self.nw.draw_feature_points(num_sub_pic, figsize),
-                            self.ne.draw_feature_points(num_sub_pic, figsize),
-                            self.se.draw_feature_points(num_sub_pic, figsize),
-                            self.sw.draw_feature_points(num_sub_pic, figsize)]
+            sub_draws = []
+            if self.nw is not None: sub_draws.append(self.nw.draw_feature_points(num_sub_pic, figsize))
+            if self.ne is not None: sub_draws.append(self.ne.draw_feature_points(num_sub_pic, figsize))
+            if self.se is not None: sub_draws.append(self.se.draw_feature_points(num_sub_pic, figsize))
+            if self.sw is not None: sub_draws.append(self.sw.draw_feature_points(num_sub_pic, figsize))
+
+            return fig, sub_draws
         else:
             return fig, None
         
@@ -431,13 +491,13 @@ class QuadTree:
             box = np.array(box)
             point = Point(box[0], box[1])
             
-            if self.nw is not None and self.nw.sigma2 < self.sigma2 and self.nw.source_boundary.contains(point): #q
+            if self.nw is not None and self.nw.mean_reg_error <= self.mean_reg_error and self.nw.source_boundary.contains(point): #q
                 box = self.nw.transform_boxes([box])[0]   
-            elif self.ne is not None and self.ne.sigma2 < self.sigma2 and self.ne.source_boundary.contains(point):
+            elif self.ne is not None and self.ne.mean_reg_error <= self.mean_reg_error and self.ne.source_boundary.contains(point):
                 box = self.ne.transform_boxes([box])[0] 
-            elif self.se is not None and self.se.sigma2 < self.sigma2 and self.se.source_boundary.contains(point):
+            elif self.se is not None and self.se.mean_reg_error <= self.mean_reg_error and self.se.source_boundary.contains(point):
                 box = self.se.transform_boxes([box])[0] 
-            elif self.sw is not None and self.sw.sigma2 < self.sigma2 and self.sw.source_boundary.contains(point):
+            elif self.sw is not None and self.sw.mean_reg_error <= self.mean_reg_error and self.sw.source_boundary.contains(point):
                 box = self.sw.transform_boxes([box])[0] 
             else:
 
@@ -454,7 +514,6 @@ class QuadTree:
 
         return result_boxes
         
-
     def draw_annotations(self, boxes, figsize=(16, 16), num_sub_pic:int=5):
         """[summary]
         Draw annotations on patches from the source and target slide
@@ -493,10 +552,15 @@ class QuadTree:
             target_x1, target_y1 = (size_target_x / 2) - target_anno_width / 2, (size_target_y / 2)  - target_anno_height / 2
             
 
-            image_source = self.source_slide.read_region(location=pA.astype(int) - (size // 2, size // 2), 
-                                                        level=0, size=(size, size))
-            image_target_trans = self.target_slide.read_region(location=transformed - (size_target_x // 2, size_target_y // 2), 
-                                                        level=0, size=(size_target_x, size_target_y))
+            image_source, image_target_trans = np.zeros(shape=(1,1)), np.zeros(shape=(1,1))
+
+            pA_location = pA.astype(int) - (size // 2, size // 2)
+            if pA_location[0] > 0 and pA_location[1] > 0 and size > 0:
+                image_source = self.source_slide.read_region(location=pA_location, level=0, size=(size, size))
+
+            trans_location = transformed - (size_target_x // 2, size_target_y // 2)
+            if trans_location[0] > 0 and trans_location[1] > 0 and size_target_x > 0 and size_target_y > 0:
+                image_target_trans = self.target_slide.read_region(trans_location, level=0, size=(size_target_x, size_target_y))
 
 
             ax = fig.add_subplot(gs[2, idx])
@@ -516,10 +580,13 @@ class QuadTree:
 
         
         if self.divided:
-            return fig, [self.nw.draw_annotations(boxes, figsize, num_sub_pic),
-                            self.ne.draw_annotations(boxes, figsize, num_sub_pic),
-                            self.se.draw_annotations(boxes, figsize, num_sub_pic),
-                            self.sw.draw_annotations(boxes, figsize, num_sub_pic)]
+            sub_draws = []
+            if self.nw is not None: sub_draws.append(self.nw.draw_annotations(boxes, figsize, num_sub_pic))
+            if self.ne is not None: sub_draws.append(self.ne.draw_annotations(boxes, figsize, num_sub_pic))
+            if self.se is not None: sub_draws.append(self.se.draw_annotations(boxes, figsize, num_sub_pic))
+            if self.sw is not None: sub_draws.append(self.sw.draw_annotations(boxes, figsize, num_sub_pic))
+
+            return fig, sub_draws
         else:
             return fig, None
 
@@ -532,8 +599,7 @@ class QuadTree:
             self.ne.draw(ax)
             self.se.draw(ax)
             self.sw.draw(ax)
-
-            
+          
     def filter_outliner(self, ptsA, ptsB):
         
         scales =  ptsA / ptsB
@@ -544,7 +610,6 @@ class QuadTree:
         #    inliners = scales[:, 0] > min(self.parent.scale_factors[:, 0]) & scales[:, 0] < max(self.parent.scale_factors[:, 0]) & scales[:, 1] > min(self.parent.scale_factors[:, 1]) & scales[:, 1] < max(self.parent.scale_factors[:, 1])
 
         return ptsA[inliners], ptsB[inliners], ptsA[inliners] / ptsB[inliners]
-        
             
     def extract_matching_points(self, source_image, target_image, maxFeatures:int=500, 
                     keepPercent:float=0.2, debug=False, 
@@ -672,6 +737,8 @@ class QuadTree:
         return ptsA, ptsB, matchedVis
 
     def _get_detector_matcher(self, point_extractor="orb", maxFeatures:int=500, crossCheck:bool=False, flann:bool=False, **kwargs):
+
+        kwargs.update({"point_extractor":point_extractor, "maxFeatures":maxFeatures, "crossCheck":crossCheck, "flann":flann})
     
         if point_extractor == "orb":
             detector = cv2.ORB_create(maxFeatures)
@@ -696,6 +763,8 @@ class QuadTree:
         return detector, matcher
 
     def _filter_matches(self, kp1, kp2, matches, ratio = 0.75, **kwargs):
+        kwargs.update({"ratio":ratio})
+
         mkp1, mkp2, good = [], [], []
         for match in matches:
             if len(match) < 2:
@@ -709,7 +778,6 @@ class QuadTree:
 
         return mkp1, mkp2, good 
 
-
     def extract_matching_points_old(self, source_image, target_image,  
                     debug=False, 
                     source_scale:[tuple]=[(1,1)], 
@@ -718,6 +786,7 @@ class QuadTree:
                     use_gray:bool=False, 
                     **kwargs
                     ):
+        kwargs.update({"debug":debug, "point_extractor":point_extractor, "use_gray":use_gray})
 
         source_scale = np.array(source_scale)
         target_scale = np.array(target_scale)
@@ -728,7 +797,7 @@ class QuadTree:
         if callable(point_extractor):
             kpsA_ori, descsA, kpsB, descsB, matches = point_extractor(source_image, target_image)
         else:
-            detector, matcher = self._get_detector_matcher(point_extractor=point_extractor, **kwargs)
+            detector, matcher = self._get_detector_matcher(**kwargs)
 
             kpsA_ori, descsA = detector.detectAndCompute(source_image, None) if use_gray == False else detector.detectAndCompute(cv2.cvtColor(source_image, cv2.COLOR_BGR2GRAY), None)
             kpsB_ori, descsB = detector.detectAndCompute(target_image, None) if use_gray == False else detector.detectAndCompute(cv2.cvtColor(target_image, cv2.COLOR_BGR2GRAY), None)
@@ -777,6 +846,30 @@ class QuadTree:
         scale.append(np.array([w, h]) / thumb.size)
 
         return thumb, scale
+
+    @staticmethod
+    def get_region_thumbnail_s(slide, depth, boundary:Rect, size=(2048, 2048)):
+
+        scale = []
+
+        #depth = self.depth + 1
+        downsample = max(*[dim / thumb for dim, thumb in zip((boundary.w, boundary.h), (size[0] * depth, size[1] * depth))])        
+        level = slide.get_best_level_for_downsample(downsample)
+
+        downsample = slide.level_downsamples[level]
+
+        x, y, w, h = int(boundary.west_edge), int(boundary.north_edge), int(boundary.w / downsample), int(boundary.h / downsample)
+        scale.append(np.array((boundary.w, boundary.h)) / (w, h))
+
+        tile = slide.read_region((x, y), level, (w, h))
+
+        thumb = Image.new('RGB', tile.size, '#ffffff')
+        thumb.paste(tile, None, tile)
+        thumb.thumbnail(size, Image.ANTIALIAS)
+        scale.append(np.array([w, h]) / thumb.size)
+
+        return thumb, scale
+
 
     def __getstate__(self):
 
