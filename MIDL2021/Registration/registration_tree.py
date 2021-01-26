@@ -19,6 +19,8 @@ from inspect import currentframe
 
 from sklearn.neighbors import LocalOutlierFactor
 
+import multiprocessing as mp
+
 
 class NodeOrientation(Enum):
     TOP         = 0
@@ -135,12 +137,18 @@ class QuadTree:
         self.source_slide_name = source_slide._filename
         self.source_boundary = source_boundary
         self._source_slide = source_slide
-        self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
+        
 
         self.target_slide_name = target_slide._filename
         self.target_boundary = target_boundary
         self._target_slide = target_slide       
-        self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
+
+        pool = mp.Pool(2)
+
+        results = pool.starmap(QuadTree.get_region_thumbnail_s, [(source_slide, self.depth+1, source_boundary, thumbnail_size), (target_slide, self.depth+1, target_boundary, thumbnail_size)])
+        pool.close()
+        #self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
+        #self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
 
         self.ptsA, self.ptsB, self.matchedVis = self.extract_matching_points_old(self.source_thumbnail, self.target_thumbnail, source_scale=self.source_scale, target_scale=self.target_scale, **kwargs)
 
@@ -838,6 +846,30 @@ class QuadTree:
         scale.append(np.array([w, h]) / thumb.size)
 
         return thumb, scale
+
+    @staticmethod
+    def get_region_thumbnail_s(slide, depth, boundary:Rect, size=(2048, 2048)):
+
+        scale = []
+
+        #depth = self.depth + 1
+        downsample = max(*[dim / thumb for dim, thumb in zip((boundary.w, boundary.h), (size[0] * depth, size[1] * depth))])        
+        level = slide.get_best_level_for_downsample(downsample)
+
+        downsample = slide.level_downsamples[level]
+
+        x, y, w, h = int(boundary.west_edge), int(boundary.north_edge), int(boundary.w / downsample), int(boundary.h / downsample)
+        scale.append(np.array((boundary.w, boundary.h)) / (w, h))
+
+        tile = slide.read_region((x, y), level, (w, h))
+
+        thumb = Image.new('RGB', tile.size, '#ffffff')
+        thumb.paste(tile, None, tile)
+        thumb.thumbnail(size, Image.ANTIALIAS)
+        scale.append(np.array([w, h]) / thumb.size)
+
+        return thumb, scale
+
 
     def __getstate__(self):
 
