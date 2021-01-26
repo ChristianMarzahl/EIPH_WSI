@@ -24,7 +24,15 @@ if __name__ == '__main__':
     folder = Path("MIDL2021/Registration/")
     annotations = pd.read_csv(folder / "Validation/GT.csv")
 
-    slide_files = {path.name: path for path in Path("D:/Datasets/ScannerStudy").glob("*/*/*.*")}
+    slide_folder = Path("D:/Datasets/ScannerStudy")
+    if slide_folder.exists() == False:
+        slide_folder = Path("/data/ScannerStudy")
+    if slide_folder.exists() == False:
+        slide_folder = Path("/mnt/d/Datasets/ScannerStudy")
+    if slide_folder.exists() == False:
+        slide_folder = Path("/data/ScannerStudy")
+
+    slide_files = {path.name: path for path in slide_folder.glob("*/*/*.*")}
 
     image_type = "CCMCT"# CCMCT
 
@@ -60,6 +68,9 @@ if __name__ == '__main__':
 
             target_annos = target_patient_annotations[target_patient_annotations["image_name"] == target_image_name]
             target_anno = target_annos.iloc[0]
+
+                            if source_anno.scanner == taret_anno.scanner:
+                    continue
 
             source_slide = openslide.OpenSlide(str(slide_files[source_anno.image_name]))
             target_slide = openslide.OpenSlide(str(slide_files[target_anno.image_name]))

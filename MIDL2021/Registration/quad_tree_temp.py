@@ -9,7 +9,6 @@ from probreg import cpd
 import cv2
 import pandas as pd
 from PIL import Image
-import imutils
 from pathlib import Path
 from probreg import transformation as tf
 from multiprocessing import Pool
@@ -44,9 +43,11 @@ if __name__ == '__main__':
     source_image_name = Path("A_CCMCT_183715A_1.svs")
     target_image_name = Path("N1_CCMCT_183715A_1.ndpi")
 
-    source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
-    #target_slide = openslide.OpenSlide(f'MIDL2021/Slides/Aperio/24_EIPH_576255 Berliner Blau.svs')
-    target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+    #source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
+    #target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+
+    source_slide = openslide.OpenSlide(f'/data/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
+    target_slide = openslide.OpenSlide(f'/data/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
 
     source_dimension = Rect.create(Rect, 0, 0, source_slide.dimensions[0], source_slide.dimensions[1])
     target_dimension = Rect.create(Rect, 0, 0, target_slide.dimensions[0], target_slide.dimensions[1])

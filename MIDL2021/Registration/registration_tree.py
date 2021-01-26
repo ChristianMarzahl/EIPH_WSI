@@ -143,12 +143,8 @@ class QuadTree:
         self.target_boundary = target_boundary
         self._target_slide = target_slide       
 
-        pool = mp.Pool(2)
-
-        results = pool.starmap(QuadTree.get_region_thumbnail_s, [(source_slide, self.depth+1, source_boundary, thumbnail_size), (target_slide, self.depth+1, target_boundary, thumbnail_size)])
-        pool.close()
-        #self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
-        #self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
+        self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
+        self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
 
         self.ptsA, self.ptsB, self.matchedVis = self.extract_matching_points_old(self.source_thumbnail, self.target_thumbnail, source_scale=self.source_scale, target_scale=self.target_scale, **kwargs)
 
