@@ -69,8 +69,8 @@ if __name__ == '__main__':
             target_annos = target_patient_annotations[target_patient_annotations["image_name"] == target_image_name]
             target_anno = target_annos.iloc[0]
 
-                            if source_anno.scanner == taret_anno.scanner:
-                    continue
+            if source_anno.scanner == taret_anno.scanner:
+                continue
 
             source_slide = openslide.OpenSlide(str(slide_files[source_anno.image_name]))
             target_slide = openslide.OpenSlide(str(slide_files[target_anno.image_name]))
