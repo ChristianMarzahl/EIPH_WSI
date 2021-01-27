@@ -7,6 +7,7 @@ from PIL import Image
 from openslide import OpenSlide
 from probreg import cpd
 from probreg import transformation as tf
+import time
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -143,6 +144,9 @@ class QuadTree:
         self.target_boundary = target_boundary
         self._target_slide = target_slide       
 
+        # start timer
+        tic = time.perf_counter()
+
         self.source_thumbnail, self.source_scale = self.get_region_thumbnail(source_slide, self.source_boundary, self.thumbnail_size)
         self.target_thumbnail, self.target_scale = self.get_region_thumbnail(target_slide, self.target_boundary, self.thumbnail_size)
 
@@ -177,6 +181,10 @@ class QuadTree:
         self.nw, self.ne, self.se, self.sw = None, None, None, None
         if depth < target_depth:
             self.divide()
+
+        # done stop timer
+        toc = time.perf_counter()
+        self.run_time = toc - tic
 
     def _get_min_reg_error_hom(self, ptsA, ptsB):
         mean_reg_error = 99999999

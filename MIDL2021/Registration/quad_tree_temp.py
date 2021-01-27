@@ -43,18 +43,18 @@ if __name__ == '__main__':
     source_image_name = Path("A_CCMCT_183715A_1.svs")
     target_image_name = Path("N1_CCMCT_183715A_1.ndpi")
 
-    #source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
-    #target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+    source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
+    target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
 
-    source_slide = openslide.OpenSlide(f'/data/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
-    target_slide = openslide.OpenSlide(f'/data/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+    #source_slide = openslide.OpenSlide(f'/data/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
+    #target_slide = openslide.OpenSlide(f'/data/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
 
     source_dimension = Rect.create(Rect, 0, 0, source_slide.dimensions[0], source_slide.dimensions[1])
     target_dimension = Rect.create(Rect, 0, 0, target_slide.dimensions[0], target_slide.dimensions[1])
 
 
     #for thumbnail_size in [(512, 512), (1024, 1024), (2048, 2048), (4096, 4096), (8192, 8192), (12288, 12288), (16384, 16384)]:
-    for target_depth in [0, 1, 2]:
+    for target_depth in [0]: #, 1, 2
         parameter = {
             # feature extractor parameters
             "point_extractor": "sift",  #orb , sift
@@ -75,6 +75,8 @@ if __name__ == '__main__':
         
 
         qtree = QuadTree(source_dimension, source_slide, target_dimension, target_slide, **parameter)
+
+        print(f"{qtree.run_time}")
 
         source_annos = annotations[annotations["image_name_stem"] == source_image_name.stem]
         target_annos = annotations[annotations["image_name_stem"] == target_image_name.stem]
