@@ -478,7 +478,7 @@ class QuadTree:
 
         return boxes
 
-    def transform_boxes(self, boxes):
+    def transform_boxes(self, boxes, max_depth=100):
         """[summary]
             Transform box coordinages from the soure to the target domain coordinate system
         Args:
@@ -495,14 +495,18 @@ class QuadTree:
             box = np.array(box)
             point = Point(box[0], box[1])
             
-            if self.nw is not None and self.nw.mean_reg_error <= self.mean_reg_error and self.nw.source_boundary.contains(point): #q
-                box = self.nw.transform_boxes([box])[0]   
-            elif self.ne is not None and self.ne.mean_reg_error <= self.mean_reg_error and self.ne.source_boundary.contains(point):
-                box = self.ne.transform_boxes([box])[0] 
-            elif self.se is not None and self.se.mean_reg_error <= self.mean_reg_error and self.se.source_boundary.contains(point):
-                box = self.se.transform_boxes([box])[0] 
-            elif self.sw is not None and self.sw.mean_reg_error <= self.mean_reg_error and self.sw.source_boundary.contains(point):
-                box = self.sw.transform_boxes([box])[0] 
+            #if self.nw is not None and self.nw.mean_reg_error <= self.mean_reg_error and self.nw.source_boundary.contains(point) and self.nw.depth <= max_depth: #q
+            if self.nw is not None and self.nw.source_boundary.contains(point) and self.nw.depth <= max_depth:
+                box = self.nw.transform_boxes([box], max_depth)[0]   
+            #elif self.ne is not None and self.ne.mean_reg_error <= self.mean_reg_error and self.ne.source_boundary.contains(point) and self.ne.depth <= max_depth:
+            elif self.ne is not None and self.ne.source_boundary.contains(point) and self.ne.depth <= max_depth:
+                box = self.ne.transform_boxes([box], max_depth)[0] 
+            #elif self.se is not None and self.se.mean_reg_error <= self.mean_reg_error and self.se.source_boundary.contains(point) and self.se.depth <= max_depth:
+            elif self.se is not None and self.se.source_boundary.contains(point) and self.se.depth <= max_depth:
+                box = self.se.transform_boxes([box], max_depth)[0] 
+            #elif self.sw is not None and self.sw.mean_reg_error <= self.mean_reg_error and self.sw.source_boundary.contains(point) and self.sw.depth <= max_depth:
+            elif self.sw is not None and self.sw.source_boundary.contains(point) and self.sw.depth <= max_depth:
+                box = self.sw.transform_boxes([box], max_depth)[0] 
             else:
 
                 source_boxes = box[:2] - (self.source_boundary.west_edge, self.source_boundary.north_edge) 
