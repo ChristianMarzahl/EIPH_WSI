@@ -21,6 +21,7 @@ from registration_tree import Rect, QuadTree
 if __name__ == '__main__':
 
     folder = Path("MIDL2021/Registration/")
+    """
     annotations = pd.read_csv(folder / "Validation/GT.csv")
 
     annotations["image_name_stem"] = [Path(image_name).stem for image_name in annotations["image_name"]]
@@ -38,30 +39,33 @@ if __name__ == '__main__':
 
     annotations["anno_width"] = [x2-x1 for x1, x2 in zip(annotations["x1"], annotations["x2"])]
     annotations["anno_height"]= [y2-y1 for y1, y2 in zip(annotations["y1"], annotations["y2"])]
+    """
 
+    #source_image_name = Path("A_CCMCT_183715A_1.svs")
+    #target_image_name = Path("N1_CCMCT_183715A_1.ndpi")
 
-    source_image_name = Path("A_CCMCT_183715A_1.svs")
-    target_image_name = Path("N1_CCMCT_183715A_1.ndpi")
+    source_image_name = Path("CRC-AI-15 X40 IHC.tif")
+    target_image_name = Path("CRC-AI-15 X40.tif")
 
-    source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
-    target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+    #source_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
+    #target_slide = openslide.OpenSlide(f'D:/Datasets/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
 
-    #source_slide = openslide.OpenSlide(f'/data/ScannerStudy/Aperio/CCMCT/{str(source_image_name)}')
-    #target_slide = openslide.OpenSlide(f'/data/ScannerStudy/NanoZoomerS210/CCMCT/{str(target_image_name)}')
+    source_slide = openslide.OpenSlide(f'D:/Datasets/ColonCancer/SingleSlide/IHC/{str(source_image_name)}')
+    target_slide = openslide.OpenSlide(f'D:/Datasets/ColonCancer/SingleSlide/HE/{str(target_image_name)}')
 
     source_dimension = Rect.create(Rect, 0, 0, source_slide.dimensions[0], source_slide.dimensions[1])
     target_dimension = Rect.create(Rect, 0, 0, target_slide.dimensions[0], target_slide.dimensions[1])
 
 
     #for thumbnail_size in [(512, 512), (1024, 1024), (2048, 2048), (4096, 4096), (8192, 8192), (12288, 12288), (16384, 16384)]:
-    for target_depth in [0]: #, 1, 2
+    for target_depth in [1]: #, 1, 2
         parameter = {
             # feature extractor parameters
             "point_extractor": "sift",  #orb , sift
-            "maxFeatures": 512, 
+            "maxFeatures": 1024, 
             "crossCheck": False, 
             "flann": False,
-            "ratio": 0.5, 
+            "ratio": 0.7, 
             "use_gray": True,
 
             # QTree parameter 
@@ -75,6 +79,7 @@ if __name__ == '__main__':
         
 
         qtree = QuadTree(source_dimension, source_slide, target_dimension, target_slide, **parameter)
+        qtree.draw_feature_points(num_sub_pic=5, figsize=(12, 12))
 
         print(f"{qtree.run_time}")
 

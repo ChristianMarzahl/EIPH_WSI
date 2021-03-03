@@ -110,7 +110,7 @@ class Rect:
 
 
 class QuadTree:
-    """A class implementing a quadtree."""
+    """A class implementing the registration quadtree."""
 
     def __init__(self, source_boundary, source_slide, target_boundary, target_slide, 
                         depth=0, target_depth=4, thumbnail_size=(2048, 2048),
@@ -439,7 +439,6 @@ class QuadTree:
             if trans_location[0] > 0 and trans_location[1] > 0 and size_target_x > 0 and size_target_y > 0:
                 image_target_trans = self.target_slide.read_region(location=trans_location, level=0, size=(size_target_x, size_target_y))
 
-
             ax = fig.add_subplot(gs[2, idx])
             ax.set_title(f'Source:  {pA}')
             ax.imshow(image_source)
@@ -618,131 +617,6 @@ class QuadTree:
         #    inliners = scales[:, 0] > min(self.parent.scale_factors[:, 0]) & scales[:, 0] < max(self.parent.scale_factors[:, 0]) & scales[:, 1] > min(self.parent.scale_factors[:, 1]) & scales[:, 1] < max(self.parent.scale_factors[:, 1])
 
         return ptsA[inliners], ptsB[inliners], ptsA[inliners] / ptsB[inliners]
-            
-    def extract_matching_points(self, source_image, target_image, maxFeatures:int=500, 
-                    keepPercent:float=0.2, debug=False, 
-                    source_scale:[tuple]=[(1,1)], target_scale:[tuple]=[(1,1)]):
-
-        source_scale = np.array(source_scale)
-        target_scale = np.array(target_scale)
-
-        source_image = np.array(source_image) if type(source_image) == Image.Image else source_image
-        target_image = np.array(target_image) if type(target_image) == Image.Image else target_image
-        
-        # convert both the input image and template to grayscale
-        imageGray = cv2.cvtColor(source_image, cv2.COLOR_BGR2GRAY) 
-        templateGray = cv2.cvtColor(target_image, cv2.COLOR_BGR2GRAY)
-        
-
-        kpsA, kpsB, matches = [], [], []
-        # extract features from the four regions top right, top left ...
-        for region in       [
-                             NodeOrientation.TOP,
-                             #NodeOrientation.NORTH_WEST, 
-                             #NodeOrientation.NORTH_EAST,
-                             #NodeOrientation.SOUTH_WEST, 
-                             #NodeOrientation.SOUTH_EAST
-                            ]:
-
-            # set all non active regions to zero
-            region_image = np.zeros_like(imageGray)
-            region_template = np.zeros_like(templateGray)
-
-            y_center_region, x_center_region =      np.array(region_image.shape[:2]) // 2
-            y_center_template, x_center_template =  np.array(region_template.shape[:2]) // 2
-
-            if region == NodeOrientation.TOP:
-                region_image = imageGray
-                region_template = templateGray
-
-            if region == NodeOrientation.NORTH_WEST:
-                region_image[:y_center_region, :x_center_region] = imageGray[:y_center_region, :x_center_region]
-                region_template[:y_center_template, :x_center_template] = templateGray[:y_center_template, :x_center_template]
-
-            if region == NodeOrientation.NORTH_EAST:
-                region_image[:y_center_region, x_center_region:] = imageGray[:y_center_region, x_center_region:]
-                region_template[:y_center_template, x_center_template:] = templateGray[:y_center_template, x_center_template:]
-
-            if region == NodeOrientation.SOUTH_WEST:
-                region_image[y_center_region:, :x_center_region] = imageGray[y_center_region:, :x_center_region]
-                region_template[y_center_template:, :x_center_template] = templateGray[y_center_template:, :x_center_template]
-
-            if region == NodeOrientation.SOUTH_EAST:
-                region_image[y_center_region:, x_center_region:] = imageGray[y_center_region:, x_center_region:]
-                region_template[y_center_template:, x_center_template:] = templateGray[y_center_template:, x_center_template:]
-
-            # use ORB to detect keypoints and extract (binary) local
-            # invariant features
-            orb = cv2.ORB_create(maxFeatures)
-            (kpsA_region, descsA) = orb.detectAndCompute(region_image, None)
-            (kpsB_region, descsB) = orb.detectAndCompute(region_template, None)
-            # match the features
-            method = cv2.DESCRIPTOR_MATCHER_BRUTEFORCE_HAMMING
-            matcher = cv2.DescriptorMatcher_create(method)
-            matches_region = matcher.match(descsA, descsB, None)
-
-            # add image patch offset for each match
-            for match in matches_region:
-                match.trainIdx += len(kpsA)
-                match.queryIdx += len(kpsB)
-                        
-            # sort the matches by their distance (the smaller the distance,
-            # the "more similar" the features are)
-            matches_region = sorted(matches_region, key=lambda x:x.distance)
-
-            # keep only the top matches
-            #keep = int(len(matches_region) * keepPercent)
-            #matches_region = matches_region[:4]
-
-            kpsA.extend(kpsA_region)
-            kpsB.extend(kpsB_region)
-            matches.extend(matches_region)
-
-
-        # divide image into x sub patch and find best match for each sub patch
-        y_step, x_step = np.array(region_image.shape[:2]) // 8
-        source_points = np.array([p.pt for p in kpsA])
-        filtered_matches = []
-        for x in range(0, region_image.shape[1], x_step):
-            for y in range(0, region_image.shape[0], y_step):
-
-                idxs = np.nonzero((source_points[:, 0] > y) & (source_points[:, 0] < y + y_step) & 
-                                        (source_points[:, 1] > x) & (source_points[:, 1] < x + x_step))[0]
-
-                #cv2.rectangle(source_image, (x,y), (x+x_step, y+y_step), (255,0,0), 3) 
-                #cv2.rectangle(target_image, (x,y), (x+x_step, y+y_step), (255,0,0), 3) 
-
-                if len(idxs) > 0:
-                    for match in matches:
-                        if match.queryIdx in idxs:
-                            filtered_matches.append(match)
-                            break
-        matches = filtered_matches
-
-
-        # check to see if we should visualize the matched keypoints
-        matchedVis = None
-        if debug:
-            matchedVis = cv2.drawMatches(source_image, kpsA, target_image, kpsB, matches, None)
-            
-        # allocate memory for the keypoints (x, y)-coordinates from the
-        # top matches -- we'll use these coordinates to compute our
-        # homography matrix
-        ptsA = np.zeros((len(matches), 2), dtype="float")
-        ptsB = np.zeros((len(matches), 2), dtype="float")
-        # loop over the top matches
-        for (i, m) in enumerate(matches):
-            # indicate that the two keypoints in the respective images
-            # map to each other
-            ptsA[i] = kpsA[m.queryIdx].pt
-            ptsB[i] = kpsB[m.trainIdx].pt
-
-            # scale points 
-            for s_scale, t_scale in zip(source_scale, target_scale):
-                ptsA[i] *= s_scale 
-                ptsB[i] *= t_scale 
-
-        return ptsA, ptsB, matchedVis
 
     def _get_detector_matcher(self, point_extractor="orb", maxFeatures:int=500, crossCheck:bool=False, flann:bool=False, **kwargs):
 
@@ -786,7 +660,7 @@ class QuadTree:
 
         return mkp1, mkp2, good 
 
-    def extract_matching_points_old(self, source_image, target_image,  
+    def extract_matching_points(self, source_image, target_image,  
                     debug=False, 
                     source_scale:[tuple]=[(1,1)], 
                     target_scale:[tuple]=[(1,1)],
@@ -854,30 +728,6 @@ class QuadTree:
         scale.append(np.array([w, h]) / thumb.size)
 
         return thumb, scale
-
-    @staticmethod
-    def get_region_thumbnail_s(slide, depth, boundary:Rect, size=(2048, 2048)):
-
-        scale = []
-
-        #depth = self.depth + 1
-        downsample = max(*[dim / thumb for dim, thumb in zip((boundary.w, boundary.h), (size[0] * depth, size[1] * depth))])        
-        level = slide.get_best_level_for_downsample(downsample)
-
-        downsample = slide.level_downsamples[level]
-
-        x, y, w, h = int(boundary.west_edge), int(boundary.north_edge), int(boundary.w / downsample), int(boundary.h / downsample)
-        scale.append(np.array((boundary.w, boundary.h)) / (w, h))
-
-        tile = slide.read_region((x, y), level, (w, h))
-
-        thumb = Image.new('RGB', tile.size, '#ffffff')
-        thumb.paste(tile, None, tile)
-        thumb.thumbnail(size, Image.ANTIALIAS)
-        scale.append(np.array([w, h]) / thumb.size)
-
-        return thumb, scale
-
 
     def __getstate__(self):
 
