@@ -3,6 +3,8 @@
 
 # Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset
 
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
 This repository contains code to replicate the results from the paper:
 [Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset](https://arxiv.org/abs/2108.08529) and links to corresponding jupyter notebooks. 
 The dataset can be examined at [EXACT](https://exact.cs.fau.de/) with the username ```SDATA_EIPH_2021``` and the password ```SDATA_ALBA```
