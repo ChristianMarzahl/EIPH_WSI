@@ -71,9 +71,9 @@ EXACT.
 | Inference | - | [FilterInferenceResults.ipynb](Inference/FilterInferenceResults.ipynb)  | Notebook to the perform non-maximum-suppression  and confidence thresholding on the inference results  [***2.5  Inter-species inference from a pre-trained model***](https://arxiv.org/abs/2108.08529) |
 | Inference | - | [UploadPickleToEXACT](Inference/UploadPickleToEXACT.ipynb)  | Notebook to upload  the inference results to EXACT |
 | Inference | - | [Fine-tune-SREP-V2](Inference/Fine-tune-SREP-V2.ipynb)  | Notebook to fine-tune the deep learning-based object detection model on the new V2 annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
-| Inference | Equine | [EquineFold-1-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the first equine fold an validate on the human and feline samples. |
-| Inference | Equine | [EquineFold-2-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the second equine fold an validate on the human and feline samples. |
-| Inference | Equine | [EquineFold-3-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the third equine fold an validate on the human and feline samples. |
+| Inference | Equine | [EquineFold-1-VS-HumanCat](Inference/CrossFold/EquineFold-1-VS-HumanCat.ipynb)  | Train on the first equine fold an validate on the human and feline samples. |
+| Inference | Equine | [EquineFold-2-VS-HumanCat](Inference/CrossFold/EquineFold-1-VS-HumanCat.ipynb)  | Train on the second equine fold an validate on the human and feline samples. |
+| Inference | Equine | [EquineFold-3-VS-HumanCat](Inference/CrossFold/EquineFold-1-VS-HumanCat.ipynb)  | Train on the third equine fold an validate on the human and feline samples. |
 | Inference | - | [Fine-tune-SREP-V2-Ablation](Inference/Fine-tune-SREP-V2-Ablation.ipynb)  | Notebook to fine-tune the deep learning-based object detection model on the new V2 annotations in an ablation manner with an increasing number of annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
 | Inference | - | [TrainSREP-V2](Inference/TrainSREP-V2.ipynb)  | Notebook to train the deep learning-based object detection model on the new V2 annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
 |   |  | | |
