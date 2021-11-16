@@ -9,6 +9,39 @@ This repository contains code to replicate the results from the paper:
 [Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset](https://arxiv.org/abs/2108.08529) and links to corresponding jupyter notebooks. 
 The dataset can be examined at [EXACT](https://exact.cs.fau.de/) with the username ```SDATA_EIPH_2021``` and the password ```SDATA_ALBA```
 
+## Paper
+
+```
+@article{marzahl2021MultipleSpecies,
+  author    = {Christian Marzahl and
+               Jenny Hill and
+               Jason Stayt and
+               Dorothee Bienzle and
+               Lutz Welker and
+               Frauke Wilm and
+               J{\"{o}}rn Voigt and
+               Marc Aubreville and
+               Andreas K. Maier and
+               Robert Klopfleisch and
+               Katharina Breininger and
+               Christof A. Bertram},
+  title     = {Inter-Species Cell Detection: Datasets on pulmonary hemosiderophages
+               in equine, human and feline specimens},
+  journal   = {CoRR},
+  volume    = {abs/2108.08529},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2108.08529},
+  abstract  = {Pulmonary hemorrhage (P-Hem) occurs among multiple species and can have various causes. Cytology of bronchoalveolarlavage fluid (BALF) using a 5-tier scoring system of alveolar macrophages based on their hemosiderin content is considered the most sensitive diagnostic method. We introduce a novel, fully annotated multi-species P-Hem dataset which consists of 74 cytology whole slide images (WSIs) with equine, feline and human samples. To create this high-quality and high-quantity dataset, we developed an annotation pipeline combining human expertise with deep learning and data visualisation techniques. We applied a deep learning-based object detection approach trained on 17 expertly annotated equine WSIs, to the remaining 39 equine, 12 human and 7 feline WSIs. The resulting annotations were semi-automatically screened for errors on multiple types of specialised annotation maps and finally reviewed by a trained pathologists. Our dataset contains a total of 297,383 hemosiderophages classified into five grades. It is one of the largest publicly availableWSIs datasets with respect to the number of annotations, the scanned area and the number of species covered.}
+  eprinttype = {arXiv},
+  eprint    = {2108.08529},
+  timestamp = {Mon, 23 Aug 2021 14:07:13 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2108-08529.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+```
+
 ## Start and Structure
 
 - Please install the [requirements.txt](requirements.txt) ```pip install -r requirements.txt```
@@ -22,6 +55,60 @@ slides.
 maps
 - [Cluster](Cluster) contains code to create custom annotation maps and synchronise the generated images and annotations with
 EXACT.
+
+### Notebooks
+
+| Section | Species | Name | Describtion |
+| :---:  | :---:  | :---  |  :--- |
+| -  | - | [Download.ipynb](Download.ipynb)  | Download the WSI files from Figshare  |
+|   | | |  |
+| Cluster  | - | [ClusterCellsBySize.ipynb](Cluster/ClusterCellsBySize.ipynb)  | Notebook to cluster the cells by size as described in the paper section  [***2.6  Semi-automatic data cleaning via customised clustering***](https://arxiv.org/abs/2108.08529) |
+| Cluster | Feline   | [Create_DensityWSI-Cat.ipynb](Cluster/Create_DensityWSI-Cat.ipynb)  | Notebook to cluster the cat cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+| Cluster | Equine | [Create_DensityWSI-Equine.ipynb](Cluster/Create_DensityWSI-Equine.ipynb)  | Notebook to cluster the equine cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+| Cluster | Human | [Create_DensityWSI-Human.ipynb](Cluster/Create_DensityWSI-Human.ipynb)  | Notebook to cluster the human cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+| Cluster | - | [SyncSizeClusterResults](SyncSizeClusterResults)  | Notebook to sync changes made by the pathologist in EXACT on the density maps to the original WSIs  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Inference | - | [FilterInferenceResults](Inference/FilterInferenceResults.ipynb)  | Notebook to the perform non-maximum-suppression  and confidence thresholding on the inference results  [***2.5  Inter-species inference from a pre-trained model***](https://arxiv.org/abs/2108.08529) |
+| Inference | - | [UploadPickleToEXACT](Inference/UploadPickleToEXACT.ipynb)  | Notebook to upload  the inference results to EXACT |
+| Inference | - | [Fine-tune-SREP-V2](Inference/Fine-tune-SREP-V2.ipynb)  | Notebook to fine-tune the deep learning-based object detection model on the new V2 annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
+| Inference | Equine | [EquineFold-1-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the first equine fold an validate on the human and feline samples. |
+| Inference | Equine | [EquineFold-2-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the second equine fold an validate on the human and feline samples. |
+| Inference | Equine | [EquineFold-3-VS-HumanCat](CrossFold/EquineFold-1-VS-HumaneCat.ipynb)  | Train on the third equine fold an validate on the human and feline samples. |
+| Inference | - | [Fine-tune-SREP-V2-Ablation](Inference/Fine-tune-SREP-V2-Ablation.ipynb)  | Notebook to fine-tune the deep learning-based object detection model on the new V2 annotations in an ablation manner with an increasing number of annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
+| Inference | - | [TrainSREP-V2](Inference/TrainSREP-V2.ipynb)  | Notebook to train the deep learning-based object detection model on the new V2 annotations [***4.1  Reevaluation of the inference step***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Domain Adaptation | Feline | [CatvsCat](Inference/Cat/CatvsCat.ipynb)  | Notebook to train the deep learning-based object detection model on cat WSI and validate on cat WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Feline | [CatvsEquine](Inference/Cat/CatvsEquine.ipynb)  | Notebook to train the deep learning-based object detection model on cat WSI and validate on equine WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Feline | [CatvsHuman](Inference/Cat/CatvsHuman.ipynb)  | Notebook to train the deep learning-based object detection model on cat WSI and validate on human WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Equine | [EquineVsCat](Inference/Equine/EquineVsCat.ipynb)  | Notebook to train the deep learning-based object detection model on equine WSI and validate on cat WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Equine | [EquineVsEquine](Inference/Equine/EquineVsEquine.ipynb)  | Notebook to train the deep learning-based object detection model on equine WSI and validate on equine WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Equine | [EquineVsHuman](Inference/Equine/EquineVsHuman.ipynb)  | Notebook to train the deep learning-based object detection model on equine WSI and validate on human WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Human | [HumanVsCat](Inference/Human/HumanVsCat.ipynb)  | Notebook to train the deep learning-based object detection model on human WSI and validate on cat WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Human | [HumanVsEquine](Inference/Human/HumanVsEquine.ipynb)  | Notebook to train the deep learning-based object detection model on human WSI and validate on equine WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation | Human | [HumanVsHuman](Inference/Human/HumanVsHuman.ipynb)  | Notebook to train the deep learning-based object detection model on human WSI and validate on human WSI [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation results | - | [CrossSpeciesValidation](Statistics/CrossValidation/CrossSpeciesValidation.ipynb)  | Notebook to analyse the inter-species cross-validation results [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+| Domain Adaptation results | - | [SourceTargetDomainVisualisation](Statistics/CrossValidation/SourceTargetDomainVisualisation.ipynb)  | Notebook to visualise the inter-species cross-validation results [***4.2  Inter-species domain adaptation***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Ablation study | Feline | [CatVsCatAblation](Inference/Cat/CatVsCatAblation.ipynb)  | Notebook to train the deep learning-based object detection model to perform an ablation study on an increasing number of slides.  [***4.3  Ablation study***](https://arxiv.org/abs/2108.08529) |
+| Ablation study | Equine | [EquineVsEquineAblation](Inference/Equine/EquineVsEquineAblation.ipynb)  | Notebook to train the deep learning-based object detection model to perform an ablation study on an increasing number of slides.  [***4.3  Ablation study***](https://arxiv.org/abs/2108.08529) |
+| Ablation study | Human | [HumanVsHumanAblation](Inference/Human/HumanVsHumanAblation.ipynb)  | Notebook to train the deep learning-based object detection model to perform an ablation study on an increasing number of slides.  [***4.3  Ablation study***](https://arxiv.org/abs/2108.08529) |
+| Ablation study results | - | [AblationStudy](Statistics/AblationStudy/AblationStudy.ipynb)  | Notebook to present the annotation study results as figures for the final paper.  [***4.3  Ablation study***](https://arxiv.org/abs/2108.08529) |
+| Ablation study results | - | [TableAblationStudyAnnotations](Statistics/AblationStudy/TableAblationStudyAnnotations.ipynb)  | Notebook to show the annotation  study results.  [***4.3  Ablation study***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Regression | Equine | [baseline-Regression](Regression/baseline-Regression.ipynb)  | Notebook to train the deep learning-based regression model to predict continuous  EIPh scores.  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+| Regression | Equine | [SetScoresAtEXACT](Regression/SetScoresAtEXACT.ipynb)  | Notebook to set the predicted EIPh scores at all cells on EXACT.  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Annotation statistics | Equine | [AnnotationVersionStatistics-SDATA-Equine](Statistics/Versions/AnnotationVersionStatistics-SDATA-Equine.ipynb)  | Equine annotation statistics.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Annotation statistics | Feline | [AnnotationVersionStatistics-SDATA-Feline](Statistics/Versions/AnnotationVersionStatistics-SDATA-Cat.ipynb)  | Feline annotation statistics.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Annotation statistics | Human | [AnnotationVersionStatistics-SDATA-Human](Statistics/Versions/AnnotationVersionStatistics-SDATA-Human.ipynb)  | Human annotation statistics.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Annotation statistics SREP | Human | [AnnotationVersionStatistics-SREP](Statistics/Versions/AnnotationVersionStatistics-SREP.ipynb)  | Annotation statistics from the SREP publication.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Annotation statistics total | Human | [AnnotationVersionStatistics-Total](Statistics/Versions/AnnotationVersionStatistics-Total.ipynb)  | Annotation statistics from the final publication.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| WSIs area | - | [AreaAndScreeing](Statistics/AreaAndScreeing.ipynb)  | Calculates the area of the WSIs  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+|   |  | | |
+| Download annotations SREP | Equine | [DownloadAnnotationsSREP](Statistics/DownloadAnnotationsSREP.ipynb)  | Download the annotations for the original SREP dataset.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Download annotations | Equine | [DownloadAnnotationsSDATA_Equine](Statistics/DownloadAnnotationsSDATA_Equine.ipynb)  | Download the annotations for the SDATA dataset.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Download annotations | Feline | [DownloadAnnotationsSDATA_CAT](Statistics/DownloadAnnotationsSDATA_CAT.ipynb)  | Download the annotations for the SDATA dataset.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
+| Download annotations | Human | [DownloadAnnotationsSDATA_Human](Statistics/DownloadAnnotationsSDATA_Human.ipynb)  | Download the annotations for the SDATA dataset.  [***2  Methods***](https://arxiv.org/abs/2108.08529) |
 
 # Troubleshooting
 
@@ -51,12 +138,6 @@ If you are using the repository or parts thereof, please cite the corresponding 
   publisher={Nature Publishing Group}
 }
 ```
-
-## Abstract
-
-Pulmonary hemorrhage (P-Hem) can have various causes including drug abuse, physical exercise, premature birth, leukaemia, autoimmune disorders and immunodeficiencies among multiple species. Cytology of bronchoalveolar lavage fluid using a scoring system which classifies hermosiderophages into five grades is considered the most sensitive diagnostic method independent of the species.
-We introduce a novel fully annotated multi-species P-Hem data-set of 74 cytology whole slide images (WSI) with human, feline  and equine samples. To create this high quality and high quantity data-set, we developed an annotation pipeline combining human expertise with deep learning and data visualisation techniques. Starting with a deep learning-based object detection approach trained on 17 equine WSI annotated by experts and afterwards applied to the remaining 47 equine, human and feline WSIs.
-The resulting annotations are efficiently semi-automatically screened for errors on multiple types of specialised annotation maps and finally validated by trained pathologists. Our data-set contains 297,383 hemosiderophages in the grades from zero to four and is one of the largest publicly available WSI data-set in respect to number of annotations, scanned area and number of species covered for one pathology. We validated our data-set with a species-wise three by three cross validation resulting in mean Average Precisions (mAP) ranging from 0.77 mAP for training on feline and validating on equine slides up to 0.88 for equine versus human. And a mean intra species mAP of 0.90 (min = 0.88, max = 0.91) showing that equine can be used to substitute human samples. 
 
 
 ## Overview
