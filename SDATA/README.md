@@ -66,7 +66,7 @@ EXACT.
 | Cluster | Feline   | [Create_DensityWSI-Cat.ipynb](Cluster/Create_DensityWSI-Cat.ipynb)  | Notebook to cluster the cat cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
 | Cluster | Equine | [Create_DensityWSI-Equine.ipynb](Cluster/Create_DensityWSI-Equine.ipynb)  | Notebook to cluster the equine cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
 | Cluster | Human | [Create_DensityWSI-Human.ipynb](Cluster/Create_DensityWSI-Human.ipynb)  | Notebook to cluster the human cells by their EIPH score as described  in the paper section  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
-| Cluster | - | [SyncSizeClusterResults](SyncSizeClusterResults)  | Notebook to sync changes made by the pathologist in EXACT on the density maps to the original WSIs  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
+| Cluster | - | [SyncSizeClusterResults](SyncSizeClusterResults.ipynb)  | Notebook to sync changes made by the pathologist in EXACT on the density maps to the original WSIs  [***2.8  Density map***](https://arxiv.org/abs/2108.08529) |
 |   |  | | |
 | Inference | - | [FilterInferenceResults](Inference/FilterInferenceResults.ipynb)  | Notebook to the perform non-maximum-suppression  and confidence thresholding on the inference results  [***2.5  Inter-species inference from a pre-trained model***](https://arxiv.org/abs/2108.08529) |
 | Inference | - | [UploadPickleToEXACT](Inference/UploadPickleToEXACT.ipynb)  | Notebook to upload  the inference results to EXACT |

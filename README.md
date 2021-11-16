@@ -11,7 +11,7 @@ docker pull bronzidocker/eiphwsi
 docker run -p 8888:8888 bronzidocker/eiphwsi
 ```
 
-Afterwards, please download the whole slide images with the following notebook. !Under Review!
+Afterwards, please download the whole slide images with the following notebook. [Download.ipynb](SDATA/Download.ipynb)
 
 ### Slides
 
