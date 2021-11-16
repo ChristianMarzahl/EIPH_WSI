@@ -13,6 +13,16 @@ docker run -p 8888:8888 bronzidocker/eiphwsi
 
 Afterwards, please download the whole slide images with the following notebook. [Download.ipynb](SDATA/Download.ipynb)
 
+
+### Build the docker container
+
+```docker
+docker build -t eiphwsi:latest .
+docker tag eiphwsi:latest bronzidocker/eiphwsi
+docker push bronzidocker/eiphwsi
+```
+
+
 ### Slides
 
 After downloading, the slides can be examined with [SlideRunner](https://github.com/DeepPathology/SlideRunner) or [EXACT](https://github.com/ChristianMarzahl/Exact). Annotations for [SlideRunner](Slides/SDATA_Final_Annotations.sqlite).
