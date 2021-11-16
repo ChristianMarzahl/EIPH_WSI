@@ -1,3 +1,6 @@
 *.svs
 *.p
 *.tiff
+.git
+.vscode
+.ipynb_checkpoints
