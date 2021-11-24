@@ -1,6 +1,7 @@
 # Deep Learning-Based Quantification of PulmonaryHemosiderophages in Cytology Slides
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.5722932.svg)](https://zenodo.org/record/5722932#.YZ3uyGDMJaQ)
 
 ## Installation & SetUp
 
