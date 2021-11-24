@@ -4,6 +4,7 @@
 # Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.5722932.svg)](https://zenodo.org/record/5722932#.YZ3uyGDMJaQ)
 
 This repository contains code to replicate the results from the paper:
 [Real deep learning can generalise to more than one species: A Comparative Three Species Whole Slide Image Dataset](https://arxiv.org/abs/2108.08529) and links to corresponding jupyter notebooks. 
