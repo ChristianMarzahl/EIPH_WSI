@@ -109,3 +109,4 @@ SDATA/Inference/test_TrainSREP-V2-Ablation.py
 SDATA/Inference/test_TrainSREP-V2.py
 SDATA/Statistics/EIPH_Annotations.pkl
 MIDL2021/Slides/*/*
+/SDATA/EIPH WSI screening.xlsx

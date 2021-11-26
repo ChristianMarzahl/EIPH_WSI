@@ -46,7 +46,7 @@ The dataset can be examined at [EXACT](https://exact.cs.fau.de/) with the userna
 ## Start and Structure
 
 - Please install the [requirements.txt](requirements.txt) ```pip install -r requirements.txt```
-- Download the slides [Download.ipynb](Download.ipynb)
+- Download the slides [Download.ipynb](Download.ipynb) or download individual files with the EXCEL [file](Paper/FilesAndLinks.xlsx) 
 - Install Openslide for Linux ```!apt-get install python3-openslide``` or Windows https://openslide.org/download/
 - The folder [Statistics](Statistics) contains notebooks which analyse the dataset annotations
 and general information about the slides
@@ -56,6 +56,16 @@ slides.
 maps
 - [Cluster](Cluster) contains code to create custom annotation maps and synchronise the generated images and annotations with
 EXACT.
+
+## Annotation formats
+
+The annotations for the cells are available in different formats. 
+
+- [SQLite](Statistics/SDATA_Final_Annotations.sqlite) for [SlideRunner](https://github.com/DeepPathology/SlideRunner)
+- [Pickle](Statistics/SDATA_Final_Annotations.pkl)
+- [CSV](Statistics/SDATA_Final_Annotations.csv)
+
+The following EXEL [file](Paper/FilesAndLinks.xlsx) contains the links to download the individual files. For an automated download, please follow the instructions at the ***Start and Structure*** section. 
 
 ### Notebooks
 
